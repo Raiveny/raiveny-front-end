@@ -1,0 +1,56 @@
+.AboutUs_Team_members{
+    display:inline-flex;
+    margin-top: 70px;
+  
+
+  }
+
+
+  .AboutUs_container {
+    position: relative;
+    width: 50%;
+  }
+
+  .AboutUs_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    width: 170px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .AboutUs_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 170px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #87a4ac;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .AboutUs_container:hover .AboutUs_overlay {
+    opacity: 1;
+  }
+
+  .AboutUs_text {
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+  }
