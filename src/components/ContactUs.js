@@ -4,6 +4,10 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  './ContactUsCSS.css';
 import ContactUsImg from  './assets/ContactUsImg.jpg'
+<<<<<<< HEAD
+=======
+import emailjs from 'emailjs-com'
+>>>>>>> b1f3cf9 (navbar and navicon)
 
 import emailjs from 'emailjs-com'
 // import '/home/fatimakh/mid-project-301/raiveny-front-end/src/App.css';

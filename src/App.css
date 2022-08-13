@@ -36,3 +36,66 @@
     transform: rotate(360deg);
   }
 }
+.HistoryHeader{
+position: fixed;
+right: 12%;
+}
+.LogBtn{
+  position: absolute;
+right: 3%;
+background-color: #6cb6c4;
+color: #FFFFFF;
+border: solid transparent;
+border-radius: 12px;
+line-height: 20px;
+margin: 0;
+outline: none;
+overflow: visible;
+padding: 13px 16px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+transform: translateZ(0);
+transition: filter .2s;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+}
+.LogBtn:active {
+  background-color: #2ca3cb;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.LogBtn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  /* position: absolute; */
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.LogBtn:main,
+.LogBtn:focus {
+  user-select: auto;
+}
+.LogBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.LogBtn:disabled {
+  cursor: auto;
+}
+
+
+
+.NavBrand{
+  margin-left :3%;;
+}

@@ -15,7 +15,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-
+import {Helmet} from "react-helmet";
 
 class App extends React.Component {
 
@@ -23,6 +23,13 @@ class App extends React.Component {
     const { isAuthenticated } = this.props.auth0;
     return (
       <div className="App">
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>RAIVENY</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="description" content="Helmet application" />
+
+            </Helmet>
         <Router>
           <Header isAuthenticated={isAuthenticated} className="App-header" />
          
