@@ -46,23 +46,15 @@ function MainPage() {
     // search when the customer did not login 
     async function notAuth(params) {
 
-        const options = {
-            url: 'http://localhost:3000/api/home',
-            method: 'POST',
-            headers: {
-              'Accept': 'application/json',
-              'Content-Type': 'application/json;charset=UTF-8'
-            },
-            data: {
-              name: 'David',
-              age: 45
-            }
-          };
+        // const options = {
+        //     url: 'https://raiveny.herokuapp.com/data?query=headache',
+        //     method: 'GET',
+        //   };
           
-          axios(options)
-            .then(response => {
-              console.log(response.status);
-            });
+        //   axios(options)
+        //     .then(response => {
+        //       console.log(response.status);
+        //     });
 
     }
 
