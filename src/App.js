@@ -27,7 +27,7 @@ class App extends React.Component {
                 <meta charSet="utf-8" />
                 <title>RAIVENY</title>
                 <link rel="canonical" href="http://mysite.com/example" />
-                <meta name="description" content="Helmet application" />
+                <meta name="description" content="Raiveny application" />
 
             </Helmet>
         <Router>
