@@ -9,7 +9,7 @@ class HeadCarousel extends Component {
     render() {
         return (
             <div>
-                <Carousel>
+                <Carousel fade>
                     <Carousel.Item interval={1800}>
                         <img
                             className="d-block w-100"

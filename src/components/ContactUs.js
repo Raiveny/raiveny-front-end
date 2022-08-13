@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  './ContactUsCSS.css';
-import ContactUsImg from  '/home/fatimakh/mid-project-301/raiveny-front-end/src/components/assets/ContactUsImg.jpg'
+import ContactUsImg from  './assets/ContactUsImg.jpg'
 import emailjs from 'emailjs-com'
 
 {/* <style>
