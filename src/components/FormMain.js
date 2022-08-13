@@ -5,13 +5,30 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactUsCSS.css';
 
 class FormMain extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {value: ''};
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+
+    handleChange(event) {
+        this.setState({value: event.target.value});
+      }
+
+    handleSubmit=(event)=>{
+        this.props.searchbtn(this.state.value);
+        event.preventDefault();
+      }
     render() {
         return (
             <div>
-                <Form>
+                <Form onSubmit={this.handleSubmit} >
                     <Form.Group className="mb-3">
                         {/* <Form.Label>Full Name</Form.Label> */}
-                        <Form.Control type="text" id="name" placeholder="Enter asymptom ..." />
+                        <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Enter asymptom ..." required />
                     </Form.Group>
                     <Button variant="primary" type="submit">
                         Send
