@@ -25,7 +25,7 @@ class App extends React.Component {
       <div className="App">
         <Router>
           <Header isAuthenticated={isAuthenticated} className="App-header" />
-          <Footer/>
+         
           <Routes>
             <Route
               exact path="/"
@@ -45,6 +45,7 @@ class App extends React.Component {
             </Route>
           </Routes>
         </Router>
+        <Footer/>
       </div >
     );
   }

@@ -66,12 +66,13 @@ import emailjs from 'emailjs-com'
                             <Form.Group className="mb-3" controlId="formBasicCheckbox">
                                 <Form.Check type="checkbox" label="Female" />
                             </Form.Group>
+                            <div className='send-rest-contract-us-buttons'>
                             <Button variant="primary" type="submit">
                                 Send
                             </Button>
                             <Button variant="primary" type="submit">
                                 Reset
-                            </Button>
+                            </Button></div>
                         </Form>
                     </div>
                 </div>

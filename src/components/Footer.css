@@ -1,0 +1,42 @@
+.all-div-footer-css {
+    max-height: 350px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    background-color:#2d2d82;
+}
+
+.image-footer-logo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-logo{
+    width: 350px;
+    height: auto;
+}
+
+.footer-descriptions{
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.copy-footer {
+    font-size: 21px;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.copy-footer u{
+    color: goldenrod;
+}
