@@ -4,30 +4,33 @@
     @import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
     </style> */
 }
-
-هاي للخط [8:26 pm,
-12/08/2022]+962 7 8750 5333: * {
+  * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Quicksand', sans-serif;
+
 }
 
 body {
     width: 100%;
     height: 100vh;
+    background: rgb(245, 241, 241);
+
 }
 
 .container {
     position: relative;
-    display: flex;
+     
     justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
     padding: 20px 100px;
 }
-
+p{
+    content: '';
+}
 .container:after {
     content: '';
     position: absolute;
@@ -37,12 +40,18 @@ body {
     height: 100%;
     background-position-y: center;
     color: black;
-    background-size: cover;
     z-index: -1;
     filter: blur(50%);
 }
-
+.container-img_form{
+    display: flex;
+}
 .form {
+    width: 500px;
+height: 500px;
+ box-sizing: content-box;
+ box-shadow: 50px;
+
     max-width: 850px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -51,14 +60,26 @@ body {
     text-align: center;
     display: flex;
     flex-flow: row wrap;
-
+position: relative;
+margin-left:150px;
+margin-top: 70px;
+}
+.form h2{
+    color: black;
+    font-size: 80px;
+    position: relative;
+    margin-left: 80px;
+    
+}
+.form p{
+    color: gray;
 }
 
 .img {
-    height: 10%;
-    width: 10%;
+    
     position: relative;
-}
+    margin-top: 70px;
+} 
 
 .contactus {
     width: 100%;

@@ -11,3 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ContactUs .contactus_title {
+  /* ContactUs CSS */
+
+/* .contactus_title{ */
+  color: blueviolet;
+  font-size: 100px;
+/* } */
+
+}
