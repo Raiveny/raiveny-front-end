@@ -17,7 +17,12 @@
 
 }
 
+/* ContactUs CSS */
 
+.contactus_title{
+  color: blueviolet;
+  font-size: 100px;
+}
 
 .App-link {
   color: #61dafb;
