@@ -15,7 +15,7 @@ class HeadCarousel extends Component {
                     </article>
 
                     <article className="hero-img" >
-                    <img src='https://i.postimg.cc/k5FJVqQd/imageedit-15-4731593162.png'></img>
+                    <img src='https://i.postimg.cc/k5FJVqQd/imageedit-15-4731593162.png' alt="hero-img"></img>
                     </article>
 
                 </section>

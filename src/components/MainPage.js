@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 import FormMain from './FormMain';
 import Result from './Result ';
 import HeadCarousel from './HeadCarousel';
 import { useAuth0 } from '@auth0/auth0-react';
-import { useState } from "react";
 import axios from "axios";
 
 function MainPage() {

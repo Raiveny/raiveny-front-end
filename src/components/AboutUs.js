@@ -21,32 +21,52 @@ class AboutUs extends Component {
                     <article className="" >
                         <h1 className='AboutUs_h1'>Instructor</h1>
                         <div className='AboutUs_Team_members'>
-                            {TeamD.map(item1 =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <img src={item1.img} className="AboutUs_image"></img>
-                                        <div className="AboutUs_overlay">
-                                            <div className="AboutUs_text">{item1.name}</div>
-                                        </div>
+                            {TeamD.map((item1, idx1) => {
+                                return (<div className="AboutUs_container" key={idx1}>
+                                    <img src={item1.img} alt="AboutUs" className="AboutUs_image" ></img>
+                                    <div className="AboutUs_overlay">
+                                        <div className="AboutUs_text">{item1.name}</div>
                                     </div>
-                                </>
+                                </div>)
+                            }
+                                // <>
+                                //     <div className="AboutUs_container" key={idx1}>
+                                //         <img src={item1.img} alt="AboutUs" className="AboutUs_image" ></img>
+                                //         <div className="AboutUs_overlay">
+                                //             <div className="AboutUs_text">{item1.name}</div>
+                                //         </div>
+                                //     </div>
+                                // </>
                             )}
                         </div>
                         <h1 className='AboutUs_h1'> Team members</h1>
 
                         <div className='AboutUs_Team_members' >
-                            {TeamData.map(item =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <a href={item.linkedin} target="_blank" >
-                                            <img src={`${item.img}`} className="AboutUs_image"></img>
+                            {TeamData.map((item, idx) => {
+                                return (
+                                    <div className="AboutUs_container" key={idx} >
+                                        <a href={item.linkedin} target="_blank" rel="noopener noreferrer" >
+                                            <img src={`${item.img}`} alt="AboutUs" className="AboutUs_image"></img>
                                             <div className="AboutUs_overlay">
                                                 <div className="AboutUs_text">{item.name}</div>
                                             </div>
                                         </a>
                                     </div>
-                                </>
+
+                                )
+                            }
+
                             )}
+
+                            {/* <div className="AboutUs_container">
+                                        <a href={item.linkedin} target="_blank" >
+                                            <img src={`${item.img}`}alt="AboutUs" className="AboutUs_image"></img>
+                                            <div className="AboutUs_overlay">
+                                                <div className="AboutUs_text">{item.name}</div>
+                                            </div>
+                                        </a>
+                                    </div> */}
+
                         </div>
 
 

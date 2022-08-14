@@ -1,5 +1,3 @@
-import logo from './logo.svg';
-import Test from './components/test';
 import './App.css';
 import React from 'react';
 import { withAuth0 } from '@auth0/auth0-react';
@@ -15,7 +13,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
 
 
 class App extends React.Component {
@@ -24,6 +22,7 @@ class App extends React.Component {
     const { isAuthenticated } = this.props.auth0;
     return (
       <div className="App">
+         <HelmetProvider>
          <Helmet>
                 <meta charSet="utf-8" />
                 <title>RAIVENY</title>
@@ -54,6 +53,7 @@ class App extends React.Component {
           </Routes>
         </Router>
         <Footer/>
+        </HelmetProvider>
       </div >
     );
   }

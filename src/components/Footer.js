@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import "./Footer.css";
-import { CDBFooter, CDBFooterLink, CDBBox, CDBBtn, CDBIcon } from 'cdbreact';
+import {
+    CDBFooter,
+    // CDBFooterLink, 
+    CDBBox, CDBBtn, CDBIcon
+} from 'cdbreact';
 
 
 
@@ -15,7 +19,7 @@ export default class Footer extends Component {
                     className="mx-auto py-4 flex-wrap"
                     style={{ width: '80%', height: '90px' }}
                 >
-                    <CDBBox  alignItems="center">
+                    <CDBBox alignItems="center">
                         <a href="/" className="d-flex align-items-center p-0 text-dark">
                             <img
                                 alt="logo"

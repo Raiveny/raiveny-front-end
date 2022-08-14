@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 
 
 class Result extends Component {
-    constructor(props){
-        super(props)
-    }
+    
     render() {
         return (
 
@@ -17,7 +15,7 @@ class Result extends Component {
                        return <>
                         <h2>{(value!==undefined)?value.medication_Name:""}</h2>
                         <p>{(this.props.data)? `Dosage: `+value.medication_Dosage:""}</p>
-                        <img src={(value.medication_img)?value.medication_img:`https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`} />
+                        <img src={(value.medication_img)?value.medication_img:`https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`} alt ="medica lImage" />
                         </>
                     })
                 }

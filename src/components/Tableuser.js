@@ -15,11 +15,9 @@ class History extends Component {
                 history: res.data.data,
             }
         );
-        console.log(this.state.history)
     }
 
     componentDidMount() {
-        console.log("inside the componentDidMount");
         this.getHistory();
 
     }
@@ -38,8 +36,8 @@ class History extends Component {
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.history.map(item =>
-                                <tr>
+                            {this.state.history.map((item,idx) =>
+                                <tr key={idx}>
                                     <td>{item.Name}</td>
                                     <td>{item.medication[0].medication_Name}</td>
                                     <td>{item.medication[0].medication_route}</td>

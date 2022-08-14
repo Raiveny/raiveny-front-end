@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import Auth from './Auth';
 import { withAuth0 } from '@auth0/auth0-react';
 import image from './assets/Logo/Nav-Logo.png'
-import HeadCarousel from './HeadCarousel';
 class Header extends React.Component {
     render() {
         const { user } = this.props.auth0;
