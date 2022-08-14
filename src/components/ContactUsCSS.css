@@ -13,9 +13,7 @@ body {
     padding: 20px 100px;
 }
 
-p{
-    content: '';
-}
+
 
 .container:after {
     content: '';
@@ -64,10 +62,16 @@ p{
 }
 
 .img {
-    width: 500px;
+    width: 400px;
     height: max-content;
-    margin-top: 70px;
+    margin-top: 40px;
+    margin-right: 100px;
+    transition: 0.8s;
+
 } 
+.img:hover{
+margin-top: 25px;
+}
 
 .contactus {
     width: 100%;
@@ -76,8 +80,17 @@ p{
 }
 
 .send-rest-contract-us-buttons{
-    display: flex;
+   background-color: black;
+}
+.send-rest-contract-us-buttons:hover{
+    background-color: rgb(82, 47, 47);
+    width: 20%;
+}
 
-    flex-direction: row;
-    gap: 25px;
+
+.Contact-p{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Play', sans-serif;
+
 }

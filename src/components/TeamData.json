@@ -1,19 +1,26 @@
 [
     {"name" : "Hasan Abedalqader", 
-    "img" : "https://i.postimg.cc/PxMty5dn/hasan.jpg%22%7D"}, 
-
+    "img" : "https://i.postimg.cc/PxMty5dn/hasan.jpg",
+    "linkedin" : "https://www.linkedin.com/in/hassanabdelqader/"}, 
+     
     {"name" : "Mohammad Haimouni", 
-    "img" : "https://i.postimg.cc/TYK6L956/mohammad.jpg%22%7D"}, 
+    "img" : "https://i.postimg.cc/TYK6L956/mohammad.jpg",
+    "linkedin" : "https://www.linkedin.com/in/mohammad-al-haimouni-64ab72242/"}, 
 
     {"name" : "Eman Riziq", 
-    "img" : "https://i.postimg.cc/GhX4rqwn/eman.jpg%22%7D"}, 
+    "img" : "https://i.postimg.cc/GhX4rqwn/eman.jpg",
+    "linkedin" : "https://www.linkedin.com/in/eman-riziq/"}, 
 
     {"name" : "Fawzi Shiyyab", 
-    "img" : "https://i.postimg.cc/W4gpD7K3/fawzi.jpg%22%7D"}, 
+    "img" : "https://i.postimg.cc/W4gpD7K3/fawzi.jpg",
+    "linkedin" : ""}, 
 
     {"name" : "Fatima Khwaileh", 
-    "img" : "https://i.postimg.cc/153zWwgC/fatima.jpg%22%7D"}, 
+    "img" : "https://i.postimg.cc/153zWwgC/fatima.jpg",
+    "linkedin" : "https://www.linkedin.com/in/fatima-khwaileh-ba08b1103/"}, 
 
     {"name" : "Ibraheem Adarbeh", 
-    "img" : "https://i.postimg.cc/wjsgPV9V/ibraheem.jpg%22%7D"}
+    "img" : "https://i.postimg.cc/wjsgPV9V/ibraheem.jpg",
+    "linkedin" : "https://www.linkedin.com/in/ibraheem-adarbeh-2a68a1246/"}     
 ]
+      

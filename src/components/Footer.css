@@ -1,61 +1,33 @@
-.all-div-footer-css {
-    max-height: 200px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 20px;
-    background-color:#2d2d82;
-    position: relative;
-   
+.shadow{
+  background-color: rgb(192, 218, 223);
+  margin-top: 3%;
 }
 
-.image-footer-logo {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.image-logo{
-    width: 350px;
-    height: auto;
-}
-
-.footer-descriptions{
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
 
 .copy-footer {
-    font-size: 21px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(0, 0, 0);
 
 }
-p {
-    animation-duration: 3s;
-    animation-name: slidein;
+.copy-footer {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
   }
 
-  @keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
+  to {
+    margin-left: 0%;
+    width: 100%;
   }
+}
 
 .copy-footer u{
-    color: goldenrod;
+  color: rgb(255, 255, 255);
 }

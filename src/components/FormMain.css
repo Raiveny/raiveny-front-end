@@ -1,0 +1,25 @@
+
+.form-search{
+    display: flex;
+    margin-left: 7%;
+    margin-bottom: 8%;
+}
+
+.form-Control{
+    margin-right: 100px;
+
+}
+.mb-3{
+margin-right: 5%;
+
+}
+.form-button{
+width: 15%;
+height: 2%;
+background-color: rgb(108,182,196);
+border: 0ch;
+
+}
+.form-button:hover{
+    background-color: black;
+}

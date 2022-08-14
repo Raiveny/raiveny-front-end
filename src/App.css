@@ -24,6 +24,9 @@
   font-size: 100px;
 }
 
+.history-h1{
+  margin-bottom: 5%;
+}
 .App-link {
   color: #61dafb;
 }
@@ -37,7 +40,7 @@
   }
 }
 .HistoryHeader{
-position: fixed;
+position:static;
 right: 12%;
 }
 .LogBtn{
