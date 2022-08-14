@@ -43,12 +43,12 @@ function MainPage() {
           
          await axios(options)
          .then(response => {
-            if(response.data.Data){
-                console.log(response.data.Data)
+            if(response.data){
+                console.log(response.data)
                     setState({
                     ...state,
                     flag : false,
-                    data : response.data.Data,
+                    data : response.data,
             })
             }
           if(response.data.message){
