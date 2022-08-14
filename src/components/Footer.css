@@ -1,11 +1,13 @@
 .all-div-footer-css {
-    max-height: 350px;
+    max-height: 200px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 20px;
     background-color:#2d2d82;
+    position: relative;
+   
 }
 
 .image-footer-logo {
@@ -35,7 +37,24 @@
     font-weight: bold;
     text-align: center;
     color: white;
+
 }
+p {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
 
 .copy-footer u{
     color: goldenrod;

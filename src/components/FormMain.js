@@ -3,13 +3,14 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './ContactUsCSS.css';
+import Spinner from 'react-bootstrap/Spinner';
 
 class FormMain extends Component {
 
-    constructor(props) {
-        super(props);
+    constructor(props){
+        super(props)
         this.state = {value: ''};
-    
+        
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
       }
@@ -25,13 +26,24 @@ class FormMain extends Component {
     render() {
         return (
             <div>
+                
                 <Form onSubmit={this.handleSubmit} >
                     <Form.Group className="mb-3">
                         {/* <Form.Label>Full Name</Form.Label> */}
                         <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Enter asymptom ..." required />
                     </Form.Group>
                     <Button variant="primary" type="submit">
-                        Send
+                     {
+                        this.props.getFalg &&
+                        <Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                         />
+                     }   
+                    Send
                     </Button>
 
                 </Form>
