@@ -59,3 +59,10 @@ p {
 .copy-footer u{
     color: goldenrod;
 }
+
+
+.foot {
+  position: absolute;
+  bottom: 0px;
+  width :100%;
+}

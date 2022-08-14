@@ -4,7 +4,7 @@ import logo from './assets/Nav-Logo.png'
 export default class Footer extends Component{
     render(){
         return (
-            <footer>
+            <footer className='foot'>
                 <div className='all-div-footer-css'>
                     <div className='image-footer-logo'>
                         <img src={logo} className='image-logo' alt='mage not found' />
