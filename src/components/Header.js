@@ -22,12 +22,12 @@ class Header extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <NavItem style={{ color: "black" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
-                            {this.props.isAuthenticated && <>
-                                <NavItem className='HistoryHeader' style={{ color: "black" }}><Link to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>
-                            </>}
                             <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
                             <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
                             <br />
+                            {this.props.isAuthenticated && <>
+                                <NavItem className='HistoryHeader' style={{ color: "black" }}><Link to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>
+                            </>}
                             <Auth className={'Auth'} />
                         </Nav>
                     </Navbar.Collapse>

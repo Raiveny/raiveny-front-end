@@ -1,40 +1,24 @@
 import React, { Component } from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import head1 from './assets/head1.jpg'
-import head2 from './assets/head2.jpg'
-import head3 from './assets/head3.jpg'
-// import {head1,head2, head3} from '/home/eman/301course/midproject/raiveny-front-end/src/components/assets'
+import './HeadCarousel.css';
 class HeadCarousel extends Component {
     render() {
         return (
             <div>
-                <Carousel fade>
-                    <Carousel.Item interval={1800}>
-                        <img
-                            className="d-block w-100"
-                            src={head1}
-                            alt="First slide"
-                            width={"300"} height={"300"}
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item interval={1800}>
-                        <img
-                            className="d-block w-100"
-                            src={head2}
-                            alt="First slide"
-                            width={"300"} height={"300"}
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item interval={1800}>
-                        <img
-                            className="d-block w-100"
-                            src={head3}
-                            alt="First slide"
-                            width={"300"} height={"300"}
-                        />
-                    </Carousel.Item>
-                   
-                </Carousel>
+                <section className="hero">
+
+                    <article className="hero-info">
+                        <h1 className="hero-h1">Why reiveny ? </h1>
+                        <p className="hero-h1">Because health is one of the most important things in life, you should follow reiveny.com</p>
+                        <div className="article-buttom">
+                       
+                        </div>
+                    </article>
+
+                    <article className="hero-img" >
+                    <img src='https://i.postimg.cc/k5FJVqQd/imageedit-15-4731593162.png'></img>
+                    </article>
+
+                </section>
             </div>
         );
     }

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './ContactUsCSS.css';
+import './FormMain.css';
 import Spinner from 'react-bootstrap/Spinner';
 
 class FormMain extends Component {
@@ -27,12 +27,12 @@ class FormMain extends Component {
         return (
             <div>
                 
-                <Form onSubmit={this.handleSubmit} >
+                <Form onSubmit={this.handleSubmit} className='form-search' >
                     <Form.Group className="mb-3">
                         {/* <Form.Label>Full Name</Form.Label> */}
-                        <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Enter asymptom ..." required />
+                        <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Enter asymptom ..." required className='form-Control' />
                     </Form.Group>
-                    <Button variant="primary" type="submit">
+                    <Button variant="primary" type="submit" className='form-button'>
                      {
                         this.props.getFalg &&
                         <Spinner
