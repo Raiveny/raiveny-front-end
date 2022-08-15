@@ -12,18 +12,19 @@ class Header extends React.Component {
         return (
             <>
                 <Navbar expand="md" style={{ backgroundColor: "#fff" }}>
-                    <Navbar.Brand className="NavBrand" 
+                    <Navbar.Brand className="NavBrand"
                     // href="/"
                     >  <img
-                        src={image}
-                        alt="logo"
-                        width={"135"} height={"70"}
-                    /></Navbar.Brand>
+                            src={image}
+                            alt="logo"
+                            width={"135"} height={"70"}
+                        /></Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
                             <NavItem style={{ color: "black" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
                             <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
                             <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
+                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>
                             <br />
                             {this.props.isAuthenticated && <>
                                 <NavItem className='HistoryHeader' style={{ color: "black" }}><Link to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>

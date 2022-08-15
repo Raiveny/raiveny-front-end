@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CardHeader from './CardHeader';
 import Card from "./Card";
 
 
@@ -12,7 +13,11 @@ class Result extends Component {
          
             this.props.data &&
             <div className='containerCard'>
-                <h1>{(this.props.data)?this.props.data.Name:""}</h1>              
+                
+                  {
+                this.props.data&&
+                <CardHeader data = {this.props.data}/>          
+                  }
                 {
                     this.props.data.medication.map((value,index)=>{
                        return <>

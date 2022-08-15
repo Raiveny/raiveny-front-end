@@ -9,6 +9,7 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import History from './components/History';
 import Footer from './components/Footer';
+import Calculations from './components/Calculations';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -50,6 +51,10 @@ class App extends React.Component {
             <Route
               exact path="/History"
               element={<History />}           >
+            </Route>
+            <Route
+              exact path="/Calculations"
+              element={<Calculations />}           >
             </Route>
           </Routes>
         </Router>
