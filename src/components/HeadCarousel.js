@@ -7,8 +7,8 @@ class HeadCarousel extends Component {
                 <section className="hero">
 
                     <article className="hero-info">
-                        <h1 className="hero-h1">Why reiveny ? </h1>
-                        <p className="hero-h1">Because health is one of the most important things in life, you should follow reiveny.com</p>
+                        <h1 className="hero-h1">Why <span className='headerLogo'>raiveny</span> ?</h1>
+                        <p className="hero-p">Because health is one of the most important things in life, you should follow reiveny.com</p>
                         <div className="article-buttom">
                        
                         </div>

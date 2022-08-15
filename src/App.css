@@ -2,6 +2,15 @@
   text-align: center;
 }
 
+@font-face {
+  font-family: abeatbyKaiRegular;
+  src: url("./components/style/abeatbyKaiRegular.otf") format("opentype");
+}
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url("./components/style/BebasNeue-Regular.otf") format("opentype");
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,6 +25,37 @@
 .App-header {
 
 }
+.cardClass{
+  margin: 28px;
+  border-radius: 33;
+  border-radius: 15px 20px 95px !important;
+  height: Auto;
+}
+.cardTitle{
+  color: red !important;
+  padding-bottom: 4px ;
+  font-family: BebasNeue-Regular !important;
+  font-size: xxx-large !important;
+
+}
+.cardText{
+
+  font-family: abeatbyKaiRegular;
+}
+
+
+.cardParent{
+  width: 100% !important;
+  display: grid !important;
+  font-family: abeatbyKaiRegular;
+  grid-template-columns: auto auto !important;
+  padding: 17px !important;
+  border-radius: 15px 20px 95px !important;
+}
+.cardImg{
+  grid-row: 1 / 4;
+}
+
 
 /* ContactUs CSS */
 
@@ -23,7 +63,19 @@
   color: blueviolet;
   font-size: 100px;
 }
-
+.hero-h1{
+  text-transform: uppercase;
+  font-family: BebasNeue-Regular !important;
+}
+.headerLogo{
+  text-align: center;
+  font-family: abeatbyKaiRegular !important;
+  font-size: 12vmin;
+  font-weight: 700;
+  text-shadow: 8px 4px 5px rgb(135 182 232) !important;
+  outline: none;
+  white-space: nowrap;
+}
 .history-h1{
   margin-bottom: 5%;
 }

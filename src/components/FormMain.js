@@ -5,6 +5,9 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './FormMain.css';
 import Spinner from 'react-bootstrap/Spinner';
 
+
+
+
 class FormMain extends Component {
 
     constructor(props){
@@ -21,12 +24,13 @@ class FormMain extends Component {
 
     handleSubmit=(event)=>{
         this.props.searchbtn(this.state.value);
+    
         event.preventDefault();
       }
     render() {
         return (
             <div>
-                
+
                 <Form onSubmit={this.handleSubmit} className='form-search' >
                     <Form.Group className="mb-3">
                         {/* <Form.Label>Full Name</Form.Label> */}
@@ -43,7 +47,7 @@ class FormMain extends Component {
                         aria-hidden="true"
                          />
                      }   
-                    Send
+                    Send 
                     </Button>
 
                 </Form>
