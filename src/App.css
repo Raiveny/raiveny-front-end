@@ -1,10 +1,34 @@
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
 }
+
+.body {
+  margin: 0!important;
+  padding: 0!important;
+}
+
+@font-face {
+  font-family: abeatbyKaiRegular;
+  src: url("./components/style/abeatbyKaiRegular.otf") format("opentype");
+}
+@font-face {
+  font-family: BebasNeue-Regular;
+  src: url("./components/style/BebasNeue-Regular.otf") format("opentype");
+}
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner&family=Rubik+Moonrocks&display=swap');
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Rubik Moonrocks', cursive; */
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.dosageDiv{
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -13,12 +37,76 @@
   }
 }
 
-.App-header {
+.cardClass{
+  /* margin: 28px; */
+  border-radius: 33;
+  border-radius: 15px 20px 95px !important;
+  height: Auto;
+}
+.cardTitle{
+  color: red !important;
+  padding-bottom: 4px ;
+  font-family: BebasNeue-Regular !important;
+  font-size: xxx-large !important;
 
+}
+.cardText{
+  font-family: 'Oswald', sans-serif;
+
+
+}
+.cardBody{
+  grid-row: 1 / 4 !important;
+}
+.titleCardHeader{
+padding-left: 150px !important;
+padding-right: 150px!important;
+border-radius: 5rem!important;
+}
+.titleCardHeaderDiv{
+  width: 100%;
+}
+
+.cardParent{
+  width: 100% !important;
+  display: grid !important;
+  font-family: abeatbyKaiRegular;
+  padding: 17px !important;
+  border-radius: 20px 20px 20px !important;
+}
+.cardImg{
+  grid-row: 1 / 4 !important;
+  width: auto !important;
+  height: 681px !important;
+  margin: auto;
 }
 
 
+/* ContactUs CSS */
 
+.contactus_title{
+  color: blueviolet;
+  font-size: 100px;
+}
+.hero-h1{
+  text-transform: uppercase;
+  font-family: BebasNeue-Regular !important;
+}
+.headerLogo{
+  text-align: center;
+  font-family: abeatbyKaiRegular !important;
+  font-size: 12vmin;
+  font-weight: 700;
+  text-shadow: 8px 4px 5px rgb(135 182 232) !important;
+  outline: none;
+  white-space: nowrap;
+}
+.history-h1{
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
 .App-link {
   color: #61dafb;
 }
@@ -30,4 +118,76 @@
   to {
     transform: rotate(360deg);
   }
+}
+.HistoryHeader{
+position:static;
+right: 12%;
+}
+
+.HistoryHeader{
+  position: absolute;
+  right: 12%;
+}
+.LogBtn{
+  position: absolute;
+right: 3%;
+background-color: #6cb6c4;
+color: #FFFFFF;
+border: solid transparent;
+border-radius: 12px;
+line-height: 20px;
+margin: 0;
+outline: none;
+padding: 13px 16px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+transform: translateZ(0);
+transition: filter .2s;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+}
+.LogBtn:active {
+  background-color: #2ca3cb;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.LogBtn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  /* position: absolute; */
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.LogBtn:main,
+.LogBtn:focus {
+  user-select: auto;
+}
+.LogBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.LogBtn:disabled {
+  cursor: auto;
+}
+
+
+
+.NavBrand{
+  margin-left :3%;;
+}
+
+.App footer{
+  width: 100%;
+  bottom: 0;
 }

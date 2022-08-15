@@ -9,12 +9,14 @@ import AboutUs from './components/AboutUs';
 import ContactUs from './components/ContactUs';
 import History from './components/History';
 import Footer from './components/Footer';
+import Calculations from './components/Calculations';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
   Routes,
   Route
 } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 
 class App extends React.Component {
@@ -23,9 +25,16 @@ class App extends React.Component {
     const { isAuthenticated } = this.props.auth0;
     return (
       <div className="App">
+         <Helmet>
+                <meta charSet="utf-8" />
+                <title>RAIVENY</title>
+                <link rel="canonical" href="http://mysite.com/example" />
+                <meta name="description" content="Raiveny application" />
+
+            </Helmet>
         <Router>
           <Header isAuthenticated={isAuthenticated} className="App-header" />
-          <Footer/>
+         
           <Routes>
             <Route
               exact path="/"
@@ -43,8 +52,15 @@ class App extends React.Component {
               exact path="/History"
               element={<History />}           >
             </Route>
+            <Route
+              exact path="/Calculations"
+              element={<Calculations />}           >
+            </Route>
           </Routes>
         </Router>
+        <footer>
+        <Footer/>
+        </footer>
       </div >
     );
   }

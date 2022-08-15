@@ -1,62 +1,74 @@
 import React, { Component } from 'react';
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import  './ContactUsCSS.css';
-import ContactUsImg from  '/home/eman/301course/midproject/raiveny-front-end/src/components/assets/ContactUsImg.jpg'
-{/* <style>
-@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
-</style> */}
+
+import './ContactUsCSS.css';
+import emailjs from 'emailjs-com'
+import 'font-awesome/css/font-awesome.min.css';
+
 class ContactUs extends Component {
     render() {
+
+        function sendEmail(e) {
+            e.preventDefault() // prevents the default behaviour of the form
+
+            emailjs.sendForm('gmail', 'template_u8xmz7r',
+                e.target, 'oXDGlQ6ZHy4kwz4DD')
+                .then((result) => {
+                    console.log(result.text);
+                },
+                    (error) => {
+                        console.log(error.text);
+                    });
+        }
         return (
+
             <div className='container'>
-                <title> Contact Us</title>
-                <div className='container-img_form'>
-                    <div className='img'> <img src={ContactUsImg} alt=''/></div>
-                    <div className='form'>
-                        <h2> Contact Us</h2>
-                              <p> Send a message and we will get back to you within 24 hours</p>
+                <h1> Contact Us </h1>
+                <div className='content'>
+                    <div className='left-side' >
+                        <div className='address details' >
+                            <i className="fas fa-map-marker-alt" > </i>
+                            <div className='topic'>Address</div>
+                            <div className='text-one'> Irbid, Jordan</div>
+                            <div className='text-two'> LTUC </div>
+                        </div>
+                        <div className="Phone details">
+                            <i className="fas fa-phone-alt"></i>
+                            <div className='topic'>Phone</div>
+                            <div className='text-one'>++962789058158 </div>
+                            <div className='text-two'>++962787505333 </div>
+                        </div>
+                        <div className="email details">
+                            <i className="fas fa-envelope"></i>
+                            <div className='topic'>Email</div>
+                            <div className='text-one'>team301project@gmail.com</div>
 
-                        <Form>
-                            <Form.Group className="mb-3">
-                                {/* <Form.Label>Full Name</Form.Label> */}
-                                <Form.Control type="text" id="name" placeholder="Enter your name ..." />
-                            </Form.Group>
+                        </div>
 
-                            <Form.Group className="mb-3" >
-                                {/* <Form.Label>Email</Form.Label> */}
-                                <Form.Control type="email" id="email" placeholder="Enter your email ..." />
-                            </Form.Group>
+                    </div>
 
+                    <div className='right-side'>
+                        <div className='topic-text' >Send us a message</div>
+                        <p> Send a message and we will get back to you within 24 hours</p>
+                        <form onSubmit={sendEmail} action='#' >
+                            <div className='input-box'>
+                                <input type="text" placeholder='Enter your name' ></input>
+                            </div>
+                            <div className='input-box'>
+                                <input type="text" placeholder='Enter your emai' ></input>
+                            </div>
+                            <div className='input-box message-box'>
+                                <textarea></textarea>
+                            </div>
+                             
+                                <button className='button' value='send'>Send</button>
+                            
+                        </form>
 
-                            <Form.Group className="mb-3">
-                                {/* <Form.Label>Subject</Form.Label> */}
-                                <Form.Control type="text" id="subject" placeholder="Subject" />
-                            </Form.Group>
-
-                            <Form.Group className="mb-3">
-                                {/* <Form.Label>Message</Form.Label> */}
-
-                                <textarea name="message" rows="5" cols="30" placeholder='Write here ...'></textarea>
-                            </Form.Group>
-
-                            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Male" />
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                                <Form.Check type="checkbox" label="Female" />
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Send
-                            </Button>
-                            <Button variant="primary" type="submit">
-                                Reset
-                            </Button>
-                        </Form>
                     </div>
                 </div>
+
             </div>
+
         );
     }
 }
