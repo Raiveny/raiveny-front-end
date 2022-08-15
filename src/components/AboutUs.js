@@ -7,7 +7,6 @@ import './AboutUs.css';
 class AboutUs extends Component {
     render() {
         const TeamData = require("./TeamData.json")
-        const TeamD = require("./TeamD.json")
         return (
             <>
                 <section className="">
@@ -18,39 +17,29 @@ class AboutUs extends Component {
                             make the user able to know his own disease and the best ways to prevent and treat it </h5 >
                     </article>
 
-                    <article className="" >
-                        <h1 className='AboutUs_h1'>Instructor</h1>
-                        <div className='AboutUs_Team_members'>
-                            {TeamD.map(item1 =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <img src={item1.img} className="AboutUs_image"></img>
-                                        <div className="AboutUs_overlay">
-                                            <div className="AboutUs_text">{item1.name}</div>
-                                        </div>
-                                    </div>
-                                </>
-                            )}
-                        </div>
-                        <h1 className='AboutUs_h1'> Team members</h1>
 
-                        <div className='AboutUs_Team_members' >
-                            {TeamData.map(item =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <a href={item.linkedin} target="_blank" >
-                                            <img src={`${item.img}`} className="AboutUs_image"></img>
-                                            <div className="AboutUs_overlay">
-                                                <div className="AboutUs_text">{item.name}</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </>
-                            )}
-                        </div>
+                    <h1 className='AboutUs_h1'> Team members</h1>
+                    <div className='row'>
+                        {TeamData.map(item =>
+
+                            <div className="column">
+                                <div className="card">
+                                    <img src={item.img} className="img"></img>
+                                    <div className="name">{item.name}</div>
+                                    <hr />
+                                    <div className="title">Full Stack Developer</div>
+                                    <div className="">{item.phone}</div>
+                                    <a href={item.linkedin} className='a' target="_blank">LINKED IN</a>
+                                    <a href={item.github} className='a' target="_blank">GITHUB</a>
+
+                                </div>
+                            </div>
+
+                        )}
+
+                    </div>
 
 
-                    </article>
 
                 </section>
             </>

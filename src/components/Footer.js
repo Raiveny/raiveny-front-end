@@ -12,10 +12,10 @@ export default class Footer extends Component {
                     display="flex"
                     justifyContent="between"
                     alignItems="center"
-                    className="mx-auto py-4 flex-wrap"
+                    className="mx-auto flex-wrap"
                     style={{ width: '80%', height: '90px' }}
                 >
-                    <CDBBox  alignItems="center">
+                    <CDBBox m="0px" p="0px"  alignItems="center">
                         <a href="/" className="d-flex align-items-center p-0 text-dark">
                             <img
                                 alt="logo"
