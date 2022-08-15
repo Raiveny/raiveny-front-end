@@ -3,7 +3,7 @@ import FormMain from './FormMain';
 import Result from './Result ';
 import HeadCarousel from './HeadCarousel';
 import { useAuth0 } from '@auth0/auth0-react';
-import toast, { Toaster } from 'react-hot-toast';
+import { useState } from "react";
 import axios from "axios";
 import Videos from './Videos';
 import Images from './Images';
@@ -13,40 +13,13 @@ function MainPage() {
         isAuthenticated,
         user
     } = useAuth0();
-    const Success = () => toast.success('We Found Something for You');
-    const Error = () => toast.error('We are Sorry, We did not Find anything');
-    const ServerError = () => toast.error('there is an Error With Server');
-   
     const [state, setState] = React.useState({ search: null , data : null, flag : false ,imgArr:[]});
     return (
         <div>
-                      <Toaster 
-                        position="top-left"
-                        reverseOrder={false}
-                        toastOptions={{
-
-                            className: '',
-                            duration: 5000,
-                            style: {
-                              background: '#6CB6C4',
-                              color: '#fff',
-                            },
-
-                            success: {
-                              duration: 5000,
-                              theme: {
-                                primary: '#6CB6C4',
-                                secondary: 'black',
-                              },
-                            },
-                          }}
-                        
-                        />
             <HeadCarousel />
-             
             <FormMain searchValue={state.search} getFalg={state.flag}  searchbtn={search} />
             <Result searchValue={state.search} getFalg={state.flag} data={state.data}/>
-            <Images  />
+          <Images  />
             <Videos />
         </div>
     );
@@ -57,6 +30,7 @@ function MainPage() {
            flag : true
         })
         //alert(state.data);
+        console.log((isAuthenticated)?user.email : ' NO');
         if(isAuthenticated)
         Auth(str);
         else
@@ -73,30 +47,29 @@ function MainPage() {
           
          await axios(options)
          .then(response => {
-            if(response.data.medication){
-              Success()
-              setState({
-                ...state,
-                flag : false,
-                data : response.data,
-              })
+            if(response.data){
+                console.log(response.data)
+                    setState({
+                    ...state,
+                    flag : false,
+                    data : response.data,
+            })
             }
           if(response.data.message){
-            Error()
-              setState({
-                  ...state,
-                  flag : false,
-                  data : null,
-                })
-            
+            setState({
+            ...state,
+               flag : false,
+               data : null,
+            })
+            alert(`there no item with this Item `)
         }
         }).catch(err =>{
-          ServerError()
                 setState({
                     ...state,
                        flag : false,
                        data : null    
                     })
+                alert(`there is an Error With the Server `)
             });
 
     }
@@ -115,7 +88,6 @@ function MainPage() {
          await axios(options)
             .then(response => {
                 if(response.data.medication){
-                    Success()
                 setState({
                 ...state,
                    flag : false,
@@ -124,13 +96,12 @@ function MainPage() {
                 })
             }
               if(response.data.message){
-                Error()
                 setState({
                 ...state,
                    flag : false,
                    data : null,
                 })
-               
+                alert(`there no item with this Item `)
             }
             }).catch(err =>{
                 setState({
@@ -138,7 +109,7 @@ function MainPage() {
                        flag : false,
                        data : null    
                     })
-                    ServerError()
+                alert(`there is an Error With the Server `)
             });
 
     }
