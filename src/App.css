@@ -95,6 +95,11 @@
 position:static;
 right: 12%;
 }
+
+.HistoryHeader{
+  position: absolute;
+  right: 12%;
+}
 .LogBtn{
   position: absolute;
 right: 3%;
