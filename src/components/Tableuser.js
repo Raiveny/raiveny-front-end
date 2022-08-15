@@ -29,7 +29,7 @@ class History extends Component {
         return (
             <>
                 {this.state.history &&
-                    <Table striped bordered hover>
+                    <Table striped responsive bordered hover>
                         <thead>
                             <tr>
                                 <th>Disease Name</th>

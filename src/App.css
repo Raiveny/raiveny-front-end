@@ -1,5 +1,13 @@
 .App {
   text-align: center;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+}
+
+.body {
+  margin: 0!important;
+  padding: 0!important;
 }
 
 @font-face {
@@ -22,11 +30,8 @@
   }
 }
 
-.App-header {
-
-}
 .cardClass{
-  margin: 28px;
+  /* margin: 28px; */
   border-radius: 33;
   border-radius: 15px 20px 95px !important;
   height: Auto;
@@ -77,7 +82,10 @@
   white-space: nowrap;
 }
 .history-h1{
-  margin-bottom: 5%;
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 .App-link {
   color: #61dafb;
@@ -105,7 +113,6 @@ border-radius: 12px;
 line-height: 20px;
 margin: 0;
 outline: none;
-overflow: visible;
 padding: 13px 16px;
 text-align: center;
 text-transform: uppercase;
@@ -153,4 +160,9 @@ white-space: nowrap;
 
 .NavBrand{
   margin-left :3%;;
+}
+
+.App footer{
+  width: 100%;
+  bottom: 0;
 }

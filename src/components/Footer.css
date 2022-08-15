@@ -1,8 +1,8 @@
 .shadow{
   background-color: rgb(192, 218, 223);
-  margin-top: 3%;
+  margin: 0;
+  padding:0;
 }
-
 
 .copy-footer {
   font-size: 15px;
@@ -29,5 +29,5 @@
 }
 
 .copy-footer u{
-  color: rgb(255, 255, 255);
+  color: rgb(56, 50, 50);
 }

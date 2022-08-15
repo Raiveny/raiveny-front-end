@@ -53,7 +53,9 @@ class App extends React.Component {
             </Route>
           </Routes>
         </Router>
+        <footer>
         <Footer/>
+        </footer>
       </div >
     );
   }
