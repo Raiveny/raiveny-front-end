@@ -10,10 +10,17 @@
   font-family: BebasNeue-Regular;
   src: url("./components/style/BebasNeue-Regular.otf") format("opentype");
 }
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+VIC+WA+NT+Beginner&family=Rubik+Moonrocks&display=swap');
+/* font-family: 'Bebas Neue', cursive;
+font-family: 'Edu VIC WA NT Beginner', cursive;
+font-family: 'Rubik Moonrocks', cursive; */
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+.dosageDiv{
+  text-align: left;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -39,21 +46,34 @@
 
 }
 .cardText{
+  font-family: 'Oswald', sans-serif;
 
-  font-family: abeatbyKaiRegular;
+
 }
-
+.cardBody{
+  grid-row: 1 / 4 !important;
+}
+.titleCardHeader{
+padding-left: 150px !important;
+padding-right: 150px!important;
+border-radius: 5rem!important;
+}
+.titleCardHeaderDiv{
+  width: 100%;
+}
 
 .cardParent{
   width: 100% !important;
   display: grid !important;
   font-family: abeatbyKaiRegular;
-  grid-template-columns: auto auto !important;
   padding: 17px !important;
-  border-radius: 15px 20px 95px !important;
+  border-radius: 20px 20px 20px !important;
 }
 .cardImg{
-  grid-row: 1 / 4;
+  grid-row: 1 / 4 !important;
+  width: auto !important;
+  height: 681px !important;
+  margin: auto;
 }
 
 

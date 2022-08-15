@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './FormMain.css';
 import Spinner from 'react-bootstrap/Spinner';
+import Card from './Card'
 
 
 
@@ -30,6 +31,7 @@ class FormMain extends Component {
     render() {
         return (
             <div>
+
 
                 <Form onSubmit={this.handleSubmit} className='form-search' >
                     <Form.Group className="mb-3">

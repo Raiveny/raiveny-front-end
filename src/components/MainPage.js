@@ -68,30 +68,30 @@ function MainPage() {
           
          await axios(options)
          .then(response => {
-            if(response.data){
-                Success()
-                    setState({
-                    ...state,
-                    flag : false,
-                    data : response.data,
-            })
+            if(response.data.medication){
+              Success()
+              setState({
+                ...state,
+                flag : false,
+                data : response.data,
+              })
             }
           if(response.data.message){
+            Error()
               setState({
                   ...state,
                   flag : false,
                   data : null,
                 })
-                Error()
             
         }
         }).catch(err =>{
+          ServerError()
                 setState({
                     ...state,
                        flag : false,
                        data : null    
                     })
-                    ServerError()
             });
 
     }
