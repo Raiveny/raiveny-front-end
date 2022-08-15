@@ -1,0 +1,26 @@
+.teamCard {
+    margin: 50px 30px;
+    padding: 5px 0px;
+    box-sizing: border-box;
+    background-color: rgb(192,218,223);
+    height: 300px;
+    width: 250px;
+    border-radius: 5px;
+}
+
+.teamCard img{
+    width: 50%;
+    height: 50%;
+    border-radius: 5px;
+}
+
+.teamCard hr {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    align-self: center;
+}
+
+.teamCard a {
+    text-decoration: none;
+}

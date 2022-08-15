@@ -44,8 +44,6 @@ class ContactUs extends Component {
 
                                 <Form.Control type="email" id="email" placeholder="Enter your email ..." />
                             </Form.Group>
-
-
                             <Form.Group className="mb-3">
                                 <Form.Label>Subject</Form.Label>
                                 <br />
@@ -59,8 +57,6 @@ class ContactUs extends Component {
 
                                 <textarea name="message" rows="5" cols="50" placeholder='Write here ...'></textarea>
                             </Form.Group>
-
-                
                             <div>
                                 <Button variant="primary" type="submit" className='send-rest-contract-us-buttons' >
                                     Send

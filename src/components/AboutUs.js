@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './AboutUs.css';
-
-
-
+import TeamData from './TeamData.json';
+import TeamCard from './TeamCard';
 
 class AboutUs extends Component {
     render() {
-        const TeamData = require("./TeamData.json")
-        const TeamD = require("./TeamD.json")
+        
+       
         return (
             <>
                 <section className="">
@@ -19,34 +18,11 @@ class AboutUs extends Component {
                     </article>
 
                     <article className="" >
-                        <h1 className='AboutUs_h1'>Instructor</h1>
-                        <div className='AboutUs_Team_members'>
-                            {TeamD.map(item1 =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <img src={item1.img} className="AboutUs_image"></img>
-                                        <div className="AboutUs_overlay">
-                                            <div className="AboutUs_text">{item1.name}</div>
-                                        </div>
-                                    </div>
-                                </>
-                            )}
-                        </div>
+                       
                         <h1 className='AboutUs_h1'> Team members</h1>
 
                         <div className='AboutUs_Team_members' >
-                            {TeamData.map(item =>
-                                <>
-                                    <div className="AboutUs_container">
-                                        <a href={item.linkedin} target="_blank" >
-                                            <img src={`${item.img}`} className="AboutUs_image"></img>
-                                            <div className="AboutUs_overlay">
-                                                <div className="AboutUs_text">{item.name}</div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </>
-                            )}
+                        {TeamData.map(item => <TeamCard name={item.name} pic={item.img} links={item.links}/>)}
                         </div>
 
 
