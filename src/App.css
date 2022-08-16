@@ -44,9 +44,12 @@ font-family: 'Rubik Moonrocks', cursive; */
   border-radius: 33;
   border-radius: 15px 20px 95px !important;
   height: Auto;
+  padding-left: 7%;
+  padding-right: 7%;
+
 }
 .cardTitle{
-  color: red !important;
+  color: #4c8389 !important;
   padding-bottom: 4px ;
   font-family: BebasNeue-Regular !important;
   font-size: xxx-large !important;
@@ -61,12 +64,17 @@ font-family: 'Rubik Moonrocks', cursive; */
   grid-row: 1 / 4 !important;
 }
 .titleCardHeader{
-padding-left: 150px !important;
+padding-left: 10% !important;
 padding-right: 150px!important;
 border-radius: 5rem!important;
+color: #4c8389;
+font-size: xx-large;
 }
 .titleCardHeaderDiv{
-  width: 100%;
+  padding-left: 7% !important;
+  padding-right: 7% !important;
+  padding-bottom: 3%;
+
 }
 
 .cardParent{
@@ -78,9 +86,9 @@ border-radius: 5rem!important;
 }
 .cardImg{
   grid-row: 1 / 4 !important;
-  width: auto !important;
-  height: 681px !important;
-  margin: auto;
+  width: 23rem !important;
+  height: 23rem !important;
+  margin: 3%;
 }
 
 
