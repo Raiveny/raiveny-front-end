@@ -62,7 +62,9 @@ class ContactUs extends Component {
                                     <textarea></textarea>
                                 </div>
 
+
                                 <button className='button' value='send'>Send</button>
+
 
                             </form>
 
