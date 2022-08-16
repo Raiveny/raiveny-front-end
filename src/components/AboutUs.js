@@ -20,8 +20,10 @@ class AboutUs extends Component {
 
                     <article className="">
                         <h1 className='AboutUs_h1'> ABOUT US </h1>
-                        <h5 className='AboutUs_h5'>We are, HEROES team, always strive to solve all patients’ problems, and because of what they suffer from, we have built this site to
+                       <div className='AboutUs-div'>
+                       <h5 className='AboutUs_h5'>We are, HEROES team, always strive to solve all patients’ problems, and because of what they suffer from, we have built this site to
                             make the user able to know his own disease and the best ways to prevent and treat it </h5 >
+                       </div>
                     </article>
 
                     <IconContext.Provider value={{ color:"black" ,size :"1.8em"}} >

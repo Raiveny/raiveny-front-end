@@ -14,7 +14,7 @@ class HeadCarousel extends Component {
                             className="d-block w-100"
                             src={head1}
                             alt="First slide"
-                            width={"300"} height={"400"}
+                            width={"300"} height={"450"}
                         />
                     </Carousel.Item>
                     <Carousel.Item interval={1800}>
@@ -22,7 +22,7 @@ class HeadCarousel extends Component {
                             className="d-block w-100"
                             src={head2}
                             alt="First slide"
-                            width={"300"} height={"400"}
+                            width={"300"} height={"450"}
                         />
                     </Carousel.Item>
                     <Carousel.Item interval={1800}>
@@ -30,7 +30,7 @@ class HeadCarousel extends Component {
                             className="d-block w-100"
                             src={head3}
                             alt="First slide"
-                            width={"300"} height={"400"}
+                            width={"300"} height={"450"}
                         />
                     </Carousel.Item>
 

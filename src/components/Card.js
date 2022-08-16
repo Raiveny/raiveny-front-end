@@ -9,12 +9,10 @@ class BasicExample extends React.Component {
 
     render() {
         return (
-            <div className='cardClass'>
+            <div className='cardClass' style={{ marginBottom : '20px' }}>
                 <Card style={{ width: '15rem' }} className='cardParent' >
                     <Card.Img className='cardImg' variant="top" src={(this.props.data.medication_img) ? this.props.data.medication_img : `https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`} 
-                    // width={10} height={10} 
-                    // style={{ width: '10' ,height: '10' }} 
-                    // height="10" weidth="10"
+                    style={{ marginRight : '25px' }} 
                     />
 
                     <Card.Body className='cardBody' >

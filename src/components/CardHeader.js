@@ -8,7 +8,7 @@ class BodyShorthandExample extends React.Component {
     render(){
         return (
         <div className='titleCardHeaderDiv'>
-        <Card body className='titleCardHeader'>{(this.props.data)?  `It is possible that you are sick with` + this.props.data.Name:""}</Card>
+        <Card body className='titleCardHeader'>{(this.props.data)?  `It is possible that you are sick with ` + this.props.data.Name:""}</Card>
         </div>
         )
               

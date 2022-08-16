@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './FormMain.css';
 import Spinner from 'react-bootstrap/Spinner';
+import rightMain from './assets/main.png'
 import Card from './Card'
 
 
@@ -30,14 +31,12 @@ class FormMain extends Component {
       }
     render() {
         return (
-            <div>
-
-
+            <div className='ParentDivForm'>
+            <div className='DivFormLift'>
                 <Form onSubmit={this.handleSubmit} className='form-search' >
                     <Form.Group className="mb-3">
                         {/* <Form.Label>Full Name</Form.Label> */}
-                        <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Enter asymptom ..." required className='form-Control' />
-                    </Form.Group>
+                        <Form.Control  onChange={this.handleChange} type="text" value={this.state.value} id="name" placeholder="Search asymptom ..." required className='form-Control' />
                     <Button variant="primary" type="submit" className='form-button'>
                      {
                         this.props.getFalg &&
@@ -49,10 +48,19 @@ class FormMain extends Component {
                         aria-hidden="true"
                          />
                      }   
-                    Send 
+                    Search 
                     </Button>
-
+                    </Form.Group>
                 </Form>
+            </div>
+                    <div className='DivFormRight'>
+                    <img
+                            src={rightMain}
+                            alt="mainirght"
+                            width={"135"} height={"70"}
+                        />
+
+                    </div>
             </div>
         );
     }
