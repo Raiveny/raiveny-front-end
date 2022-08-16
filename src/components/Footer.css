@@ -1,10 +1,15 @@
 .shadow{
-  background-color: rgb(192, 218, 223);
   margin: 0;
   padding:0;
   position: relative;
   bottom: 0px;
   width: 100%;
+  padding-top: 25px;
+  background-color: #E2FCFF;
+  height: 300px ;
+  text-shadow: 0.5px  .5px 1px rgb(92,173,190) ;
+  font-style: italic;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .copy-footer {
@@ -19,18 +24,12 @@
   animation-name: slidein;
 }
 
-/* @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-} */
-
 .copy-footer u{
   color: rgb(56, 50, 50);
+}
+
+.footIcons {
+  position: absolute;
+  bottom: 25px;
+
 }

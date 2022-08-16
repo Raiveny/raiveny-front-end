@@ -8,12 +8,14 @@ import HeadCarousel from './HeadCarousel';
 import Container from 'react-bootstrap/Container';
 import LoginButton from './LoginButton';
 import LogoutButton from './LogoutButton';
+
 class Header extends React.Component {
     render() {
         const { user } = this.props.auth0;
 
         return (
             <>
+
 
                 <Navbar collapseOnSelect expand="md" style={{ backgroundColor: "#fff" }}>
 
@@ -26,6 +28,7 @@ class Header extends React.Component {
                             alt="logo"
                             width={"135"} height={"70"}
                         /></Navbar.Brand>
+
 
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                      <Navbar.Collapse id="responsive-navbar-nav">
@@ -64,6 +67,7 @@ class Header extends React.Component {
                             <NavItem > <LoginButton /> </NavItem>                        
                         </>
                         }
+
 
 
                         </Nav>
