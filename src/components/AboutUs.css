@@ -99,10 +99,14 @@ body {
   /* this adds the "card" effect */
   padding: 14px;
   text-align: center;
+
   background-color: rgb(226,252,255);
   border:solid;
   border-color: rgb(108,188,196);
   border-radius: 30px;
+
+
+
 
 
 }

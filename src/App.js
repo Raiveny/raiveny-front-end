@@ -16,7 +16,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import {Helmet} from "react-helmet";
+import { Helmet } from "react-helmet";
 
 
 class App extends React.Component {
@@ -24,44 +24,45 @@ class App extends React.Component {
   render() {
     const { isAuthenticated } = this.props.auth0;
     return (
-      <div className="App">
-         <Helmet>
-                <meta charSet="utf-8" />
-                <title>RAIVENY</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-                <meta name="description" content="Raiveny application" />
+      <>
+        <div className="App">
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>RAIVENY</title>
+            <link rel="canonical" href="http://mysite.com/example" />
+            <meta name="description" content="Raiveny application" />
 
-            </Helmet>
-        <Router>
-          <Header isAuthenticated={isAuthenticated} className="App-header" />
-         
-          <Routes>
-            <Route
-              exact path="/"
-              element={<MainPage />}            >
-            </Route>
-            <Route
-              exact path="/AboutUs"
-              element={<AboutUs />}           >
-            </Route>
-            <Route
-              exact path="/ContactUs"
-              element={<ContactUs />}           >
-            </Route>
-            <Route
-              exact path="/History"
-              element={<History />}           >
-            </Route>
-            <Route
-              exact path="/Calculations"
-              element={<Calculations />}           >
-            </Route>
-          </Routes>
-        </Router>
-        <footer>
-        <Footer/>
-        </footer>
-      </div >
+          </Helmet>
+          <Router>
+            <Header isAuthenticated={isAuthenticated} className="App-header" />
+
+            <Routes>
+              <Route
+                exact path="/"
+                element={<MainPage />}            >
+              </Route>
+              <Route
+                exact path="/AboutUs"
+                element={<AboutUs />}           >
+              </Route>
+              <Route
+                exact path="/ContactUs"
+                element={<ContactUs />}           >
+              </Route>
+              <Route
+                exact path="/History"
+                element={<History />}           >
+              </Route>
+              <Route
+                exact path="/Calculations"
+                element={<Calculations />}           >
+              </Route>
+            </Routes>
+          </Router>
+        </div >
+        <Footer />
+
+      </>
     );
   }
 };
