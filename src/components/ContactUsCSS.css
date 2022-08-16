@@ -1,4 +1,4 @@
-/* 
+ /* 
 * {
     margin: 0;
    padding: 0;
@@ -6,7 +6,6 @@
    font-family: "Poppins", sans-serif;
 z-index: -1;
 }
-
 body {
    width: 100%;
    min-height: 100vh;
@@ -33,7 +32,8 @@ body {
    border-radius: 6px;
    padding: 20px 60px 40px 40px;
    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
-   
+ top: -150px;
+ 
 }
 
 
@@ -41,6 +41,7 @@ body {
    display: flex;
    align-items: center;
    justify-content: space-between;
+ 
 }
 
 .container .content .left-side::before {
@@ -162,10 +163,8 @@ body {
     cursor: pointer;
    transform: all 0.3s ease;
 }
-
 .right-side .button input[type="button"] :hover {
    background: #afafb6;
-
 }   */ 
 
 @media (max-width:950px) {
