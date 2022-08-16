@@ -14,15 +14,19 @@ class Header extends React.Component {
 
         return (
             <>
+
                 <Navbar collapseOnSelect expand="md" style={{ backgroundColor: "#fff" }}>
+
              
                     <Navbar.Brand 
+
                     // href="/"
                     >  <img
                             src={image}
                             alt="logo"
                             width={"135"} height={"70"}
                         /></Navbar.Brand>
+
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                      <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
@@ -60,6 +64,7 @@ class Header extends React.Component {
                             <NavItem > <LoginButton /> </NavItem>                        
                         </>
                         }
+
 
                         </Nav>
                     </Navbar.Collapse>
