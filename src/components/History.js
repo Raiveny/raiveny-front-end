@@ -10,7 +10,7 @@ const History = () => {
     // console.log('email ? ', user.email)
     return (
         <>
-            <h1>history</h1> 
+            <h1 className='history-h1'>History</h1> 
             {isAuthenticated &&
                 (
                     <Tableuser useremail={user.email} />

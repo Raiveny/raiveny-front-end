@@ -5,6 +5,15 @@ import CalCard from './CalCard';
 import './Calculations.css';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
+import image from './assets/health/img2.jpg';
+import Underweight from './assets/health/underweight.png';
+import Normal from './assets/health/normal.png';
+import Overweight from './assets/health/overweight.png';
+import Obese from './assets/health/obese.png';
+import BMIDefault from './assets/health/BMI.jpg';
+
+
+
 
 class Calculations extends Component {
     constructor(props) {
@@ -16,7 +25,8 @@ class Calculations extends Component {
             BMRMsg: "",
             IBW: 0, //Ideal Body Wait
             WeightMsg: "",
-            IsCard: false
+            IsCard: false,
+            BmiImg: BMIDefault
         }
     }
     handleSubmit = (e) => {
@@ -36,28 +46,35 @@ class Calculations extends Component {
         const tempBMI = Math.round(((Weight / Math.pow(Height, 2)) + Number.EPSILON) * 100) / 100
         let tempBMIMsg = "";
         let tempWeightMsg = "";
+        let tempImg = ""
         switch (true) {
             case (tempBMI < 18.5):
                 tempBMIMsg = "- you're in the underweight range";
-                tempWeightMsg = "- You Adviced to eat MORE about 500 CAL  to reach the Ideal Weight "
+                tempWeightMsg = "- You Adviced to eat MORE about 500 CAL  to reach the Ideal Weight ";
+                tempImg = Underweight;
                 break;
             case (tempBMI >= 18.5 && tempBMI < 24.9):
                 tempBMIMsg = "- you're in the healthy weight range";
+                tempImg = Normal;
                 break;
             case (tempBMI >= 24.9 && tempBMI < 29.9):
                 tempBMIMsg = "- you're in the overweight range";
                 tempWeightMsg = "- You Adviced to eat LESS about 500 CAL  to reach the Ideal Weight "
+                tempImg = Overweight;
                 break;
             case (tempBMI >= 29.9):
                 tempBMIMsg = "- you're in the obese range";
                 tempWeightMsg = "- You Adviced to eat LESS about 500 CAL  to reach the Ideal Weight "
+                tempImg = Obese;
+
                 break;
         }
         this.setState(
             {
                 BMI: tempBMI,
                 BMIMsg: tempBMIMsg,
-                WeightMsg: tempWeightMsg
+                WeightMsg: tempWeightMsg,
+                BmiImg: tempImg
             }
         )
     }
@@ -96,75 +113,81 @@ class Calculations extends Component {
 
     render() {
         return (
-            <div className='container1' >
-                <h3> Enter Your Information </h3>
-                <div className='content1'>
-                    {
-                        // this.state.IsCard &&
-                        <div className="left-side1" >
-                            <Card  className='CalCard' >
-                                <ListGroup variant="flush" className='listgroup'>
-                                    <ListGroup.Item>- Your BMI is :  {this.state.BMI}<br />{this.state.BMIMsg} </ListGroup.Item>
-                                    <ListGroup.Item>- Your Ideal Weight is : {this.state.IBW}</ListGroup.Item>
-                                    <ListGroup.Item>- To keep Your Weight you need to take {this.state.BMR} Calories<br />{this.state.WeightMsg}</ListGroup.Item>
-                                </ListGroup>
-                            </Card>
-                            {/* <CalCard BMI={this.state.BMI} BMR={this.state.BMR} IBW={this.state.IBW} WeightMsg={this.state.WeightMsg} BMIMsg={this.state.BMIMsg} /> */}
+            <>
+                <img className='img-cal' width='100%' height='450' src={image} />
 
-                        </div>}                        {/* left-side */}
-                    <div className='right-side1'>
-                        <Form onSubmit={this.handleSubmit}>
-                            <Form.Group className="mb-3" >
-                                <Form.Label>Enter You Weight</Form.Label>
-                                <Form.Control type='Number' required id="Weight" placeholder="Enter You Weight" />
-                                <Form.Control.Feedback type="invalid">
-                                    Please provide a valid Weight.
-                                </Form.Control.Feedback>
-                            </Form.Group>
+                <div className='container1' >
+                    <h3 className='cal-h3'> Enter Your Information </h3>
+                    <div className='content1'>
+                        <div className='left-side1'>
+                            <Form onSubmit={this.handleSubmit}>
+                                <Form.Group className="mb-3" >
+                                    {/* <Form.Label>Enter You Weight</Form.Label> */}
+                                    <Form.Control type='Number' required id="Weight" placeholder="Enter You Weight" />
+                                    <Form.Control.Feedback type="invalid">
+                                        Please provide a valid Weight.
+                                    </Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                    {/* <Form.Label>Enter Your Height</Form.Label> */}
+                                    <Form.Control type='Number' required id="Height" placeholder="Enter Your Height" />
+                                    <Form.Control.Feedback type="invalid">
+                                        Please provide a valid Height.
+                                    </Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                    {/* <Form.Label>Enter Your Age</Form.Label> */}
+                                    <Form.Control type='Number' required id="Age" placeholder="Enter Your Age" />
+                                    <Form.Control.Feedback type="invalid">
+                                        Please provide a valid Age.
+                                    </Form.Control.Feedback>
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                    {/* <Form.Label>How Active Are You?</Form.Label> */}
+                                    <Form.Select id="Active" >
+                                        {/* <Form.Control required  placeholder="Enter Your Active  level" /> */}
+                                        <option disabled defaultChecked value="">Enter Your Active level</option>
+                                        <option value="1.2">Sedentary</option>
+                                        <option value="1.375">Lightly active</option>
+                                        <option value="1.55">Moderately active </option>
+                                        <option value="1.725">Active</option>
+                                        <option value="1.9">Very active </option>
+                                    </Form.Select>
+                                </Form.Group>
+                                <Form.Group className="mb-3" >
+                                    {/* <Form.Label>Enter Your Gender</Form.Label> */}
+                                    <Form.Select id="Gender">
+                                        <option value="M">Male</option>
+                                        <option value="F">Female</option>
+                                    </Form.Select>
+                                </Form.Group>
+                                <Button variant="primary" type="submit" className='btm-cal'>
+                                    Calculate
+                                </Button>
+                            </Form>
+                        </div>                    {/* left-side */}
+                        {
+                            // this.state.IsCard &&
+                            <div className="right-side1" >
+                                <Card className='CalCard' >
+                                    <Card.Img variant="top" src={this.state.BmiImg} style={{width: '320px' , height :'320px', marginLeft : 'auto', marginRight : 'auto'}} />
+                                    <Card.Body>
+                                        <Card.Title>Your Result</Card.Title>
+                                    </Card.Body>
+                                    <ListGroup variant="flush" className='listgroup'>
+                                        <ListGroup.Item>- Your BMI is :  {this.state.BMI}<br />{this.state.BMIMsg} </ListGroup.Item>
+                                        <ListGroup.Item>- Your Ideal Weight is : {this.state.IBW}</ListGroup.Item>
+                                        <ListGroup.Item>- To keep Your Weight you need to take {this.state.BMR} Calories<br />{this.state.WeightMsg}</ListGroup.Item>
+                                    </ListGroup>
+                                </Card>
+                                {/* <CalCard BMI={this.state.BMI} BMR={this.state.BMR} IBW={this.state.IBW} WeightMsg={this.state.WeightMsg} BMIMsg={this.state.BMIMsg} BmiImg={this.state.BmiImg} /> */}
 
-                            <Form.Group className="mb-3" >
-                                {/* <Form.Label>Enter Your Height</Form.Label> */}
-                                <Form.Control type='Number' required id="Height" placeholder="Enter Your Height" />
-                                <Form.Control.Feedback type="invalid">
-                                    Please provide a valid Height.
-                                </Form.Control.Feedback>
-                            </Form.Group>
-                            <Form.Group className="mb-3" >
-                                {/* <Form.Label>Enter Your Age</Form.Label> */}
-                                <Form.Control type='Number' required id="Age" placeholder="Enter Your Age" />
-                                <Form.Control.Feedback type="invalid">
-                                    Please provide a valid Age.
-                                </Form.Control.Feedback>
-
-                            </Form.Group>
-                            <Form.Group className="mb-3" >
-                                {/* <Form.Label>How Active Are You?</Form.Label> */}
-                                <Form.Select id="Active" >
-                                    {/* <Form.Control required  placeholder="Enter Your Active  level" /> */}
-                                    <option disabled defaultChecked value="">Enter Your Active level</option>
-                                    <option value="1.2">Sedentary</option>
-                                    <option value="1.375">Lightly active</option>
-                                    <option value="1.55">Moderately active </option>
-                                    <option value="1.725">Active</option>
-                                    <option value="1.9">Very active </option>
-                                </Form.Select>
-                            </Form.Group>
-                            <Form.Group className="mb-3" >
-                                {/* <Form.Label>Enter Your Gender</Form.Label> */}
-                                <Form.Select id="Gender">
-                                    <option value="M">Male</option>
-                                    <option value="F">Female</option>
-                                </Form.Select>
-                            </Form.Group>
-                            <Button variant="primary" type="submit">
-                                Calculate
-                            </Button>
-                        </Form>
-                    </div>                    {/* right-side */}
+                            </div>}                        {/* right-side */}
 
 
-                </div>                 {/* content */}
-            </div>            // container
+                    </div>
+                </div>                            {/* container */}
+            </>
         );
     }
 }

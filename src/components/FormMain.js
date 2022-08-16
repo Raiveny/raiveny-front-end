@@ -49,7 +49,7 @@ class FormMain extends Component {
                         aria-hidden="true"
                          />
                      }   
-                    Send 
+                    search 
                     </Button>
 
                 </Form>
