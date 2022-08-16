@@ -104,12 +104,12 @@ border-radius: 5rem!important;
   outline: none;
   white-space: nowrap;
 }
-.history-h1{
+/* .history-h1{
   width: 100%;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 10px;
-}
+} */
 .App-link {
   color: #61dafb;
 }
@@ -122,10 +122,10 @@ border-radius: 5rem!important;
     transform: rotate(360deg);
   }
 }
-.HistoryHeader{
+/* .HistoryHeader{
 position:static;
 right: 12%;
-}
+} */
 
 .HistoryHeader{
   position: absolute;

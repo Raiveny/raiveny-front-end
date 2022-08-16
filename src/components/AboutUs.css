@@ -28,9 +28,9 @@
 
 
 .card {
-  background: -moz-linear-gradient(-45deg, #ffe0e3 32%, #a7e0e5 68%);
+  /* background: -moz-linear-gradient(-45deg, #ffe0e3 32%, #a7e0e5 68%);
   background: -webkit-linear-gradient(-45deg, #ffe0e3 32%, #a7e0e5 68%);
-  background: linear-gradient(135deg, #ffe0e3 32%, #a7e0e5 68%);
+  background: linear-gradient(135deg, #ffe0e3 32%, #a7e0e5 68%); */
   animation: card-ani1 2s;
   transition-delay: 1s;
   transition-timing-function: easeOutCirc;

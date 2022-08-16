@@ -8,27 +8,31 @@ class History extends Component {
             history: [],
         }
     }
-    // getHistory = async () => {
-    //     const res = await axios.get('https://raiveny.herokuapp.com/data/history?userEmail=team301project@gmail.com');
-    //     this.setState(
-    //         {
-    //             history: res.data.data,
-    //         }
-    //     );
-    //     console.log(this.state.history)
-    // }
+    getHistory = async () => {
+        const URL=`https://raiveny.herokuapp.com/data/history?userEmail=${this.props.useremail}`
+        console.log("from table " + URL )
+        // const res = await axios.get('https://raiveny.herokuapp.com/data/history?userEmail=team301project@gmail.com');
+                const res = await axios.get(URL);
 
-    // componentDidMount() {
-    //     console.log("inside the componentDidMount");
-    //     this.getHistory();
+        this.setState(
+            {
+                history: res.data.data,
+            }
+        );
+        console.log(this.state.history)
+    }
 
-    // }
+    componentDidMount() {
+        console.log("inside the componentDidMount");
+        this.getHistory();
+
+    }
 
     render() {
 
         return (
             <>
-                {/* {this.state.history &&
+                {this.state.history &&
                     <Table striped responsive bordered hover>
                         <thead>
                             <tr>
@@ -48,7 +52,7 @@ class History extends Component {
                             )}
                         </tbody>
                     </Table>
-                } */}
+                }
             </>
         );
     }

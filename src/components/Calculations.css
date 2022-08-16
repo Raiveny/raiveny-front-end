@@ -52,12 +52,13 @@
     /* color: rgb(135 182 232); */
     /* margin-bottom: 10px; */
     font-size: 14px;
-    color: #afafb6;
+    color: #afafb6 !important;
 }
-.container .content .Card
+.container .content .CalCard
 {
     height: 100%;
     width: 30rem;
+    background-color:#ffff ;
 }
  /* .container .left-side .details {
     margin: 14px;

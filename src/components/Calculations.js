@@ -102,7 +102,7 @@ class Calculations extends Component {
                     {
                         // this.state.IsCard &&
                         <div className="left-side " >
-                            <Card  className='Card' >
+                            <Card  className='CalCard' >
                                 <ListGroup variant="flush" className='listgroup'>
                                     <ListGroup.Item>- Your BMI is :  {this.state.BMI}<br />{this.state.BMIMsg} </ListGroup.Item>
                                     <ListGroup.Item>- Your Ideal Weight is : {this.state.IBW}</ListGroup.Item>
