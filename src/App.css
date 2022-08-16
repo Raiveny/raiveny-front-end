@@ -3,12 +3,14 @@
   padding: 0;
   margin: 0;
   min-height: 100vh;
+  /* background-color: #dededd; */
 }
 
 
 .body {
   margin: 0!important;
   padding: 0!important;
+  
 }
 
 .nav-link{
@@ -55,9 +57,12 @@ font-family: 'Rubik Moonrocks', cursive; */
   border-radius: 33;
   border-radius: 15px 20px 95px !important;
   height: Auto;
+  padding-left: 7%;
+  padding-right: 7%;
+
 }
 .cardTitle{
-  color: red !important;
+  color: #4c8389 !important;
   padding-bottom: 4px ;
   font-family: BebasNeue-Regular !important;
   font-size: xxx-large !important;
@@ -72,12 +77,17 @@ font-family: 'Rubik Moonrocks', cursive; */
   grid-row: 1 / 4 !important;
 }
 .titleCardHeader{
-padding-left: 150px !important;
+padding-left: 10% !important;
 padding-right: 150px!important;
 border-radius: 5rem!important;
+color: #4c8389;
+font-size: xx-large;
 }
 .titleCardHeaderDiv{
-  width: 100%;
+  padding-left: 7% !important;
+  padding-right: 7% !important;
+  padding-bottom: 3%;
+
 }
 
 .cardParent{
@@ -89,9 +99,9 @@ border-radius: 5rem!important;
 }
 .cardImg{
   grid-row: 1 / 4 !important;
-  width: auto !important;
-  height: 681px !important;
-  margin: auto;
+  width: 23rem !important;
+  height: 23rem !important;
+  margin: 3%;
 }
 
 .contactus_title{
@@ -102,6 +112,9 @@ border-radius: 5rem!important;
   text-transform: uppercase;
   font-family: BebasNeue-Regular !important;
 }
+.hero-img{
+  margin-top: 15%;
+}
 .headerLogo{
   text-align: center;
   font-family: abeatbyKaiRegular !important;
@@ -111,12 +124,12 @@ border-radius: 5rem!important;
   outline: none;
   white-space: nowrap;
 }
-.history-h1{
+/* .history-h1{
   width: 100%;
   text-align: center;
   padding-top: 30px;
   padding-bottom: 10px;
-}
+} */
 .App-link {
   color: #61dafb;
 }
@@ -129,10 +142,10 @@ border-radius: 5rem!important;
     transform: rotate(360deg);
   }
 }
-.HistoryHeader{
+/* .HistoryHeader{
 position:static;
 right: 12%;
-}
+} */
 
 .HistoryHeader{
   position: absolute;
@@ -200,4 +213,44 @@ white-space: nowrap;
 .App footer{
   width: 100%;
   bottom: 0;
+}
+
+.div-video{
+  margin-top: 100px;
+}
+.video{
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+
+  margin-left: 12%;
+}
+.item {
+  background: gray;
+  width: 50px;
+  height: 50px;
+  margin: 0 20px;
+}
+
+/* images */
+
+.image-src{
+  margin-top: 100px;
+  display: flex;
+  margin-left: 5%;
+}
+ 
+.item1 {
+  background: gray;
+  /* width: px;
+  height: 50px; */
+  margin: 0 0px;
+}
+.item2 {
+  background: gray;
+  /* width: 50px;
+  height: 50px; */
+  margin: 0 0px;
+ position: relative;
+ top: -50px;
 }

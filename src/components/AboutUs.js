@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 import './AboutUs.css';
+import { FaGithub } from "react-icons/fa";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillTwitterCircle } from "react-icons/ai";
+import { IconContext } from 'react-icons';
+
+
+
 
 
 
@@ -17,28 +24,32 @@ class AboutUs extends Component {
                             make the user able to know his own disease and the best ways to prevent and treat it </h5 >
                     </article>
 
+                    <IconContext.Provider value={{ color:"black" ,size :"1.8em"}} >
 
-                    <h1 className='AboutUs_h1'> Team members</h1>
-                    <div className='row'>
-                        {TeamData.map(item =>
+                        <h1 className='AboutUs_h1'> Team members</h1>
+                        <div className='row'>
+                            {TeamData.map(item =>
+                                <div className="column">
+                                    <div className="card">
+                                        <img src={item.img} className="img"></img>
+                                        <div className="name">{item.name}</div>
+                                        <hr />
+                                        <div className="title">Full Stack Developer</div>
+                                        <div className="icon">
+                                            <a href={item.github} className='a' target="_blank"><FaGithub /></a>
+                                            <a href={item.linkedin} className='a' target="_blank"><AiFillLinkedin /></a>
+                                            <a href={item.linkedin} className='a' target="_blank"><AiFillTwitterCircle /></a>
 
-                            <div className="column">
-                                <div className="card">
-                                    <img src={item.img} className="img"></img>
-                                    <div className="name">{item.name}</div>
-                                    <hr />
-                                    <div className="title">Full Stack Developer</div>
-                                    <div className="">{item.phone}</div>
-                                    <a href={item.linkedin} className='a' target="_blank">LINKED IN</a>
-                                    <a href={item.github} className='a' target="_blank">GITHUB</a>
+                                        </div>
 
+                                    </div>
                                 </div>
-                            </div>
 
-                        )}
+                            )}
 
-                    </div>
+                        </div>
 
+                    </IconContext.Provider>
 
 
                 </section>
