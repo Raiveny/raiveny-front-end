@@ -96,12 +96,12 @@ class Calculations extends Component {
 
     render() {
         return (
-            <div className='container' >
+            <div className='container1' >
                 <h3> Enter Your Information </h3>
-                <div className='content'>
+                <div className='content1'>
                     {
                         // this.state.IsCard &&
-                        <div className="left-side " >
+                        <div className="left-side1" >
                             <Card  className='CalCard' >
                                 <ListGroup variant="flush" className='listgroup'>
                                     <ListGroup.Item>- Your BMI is :  {this.state.BMI}<br />{this.state.BMIMsg} </ListGroup.Item>
@@ -112,7 +112,7 @@ class Calculations extends Component {
                             {/* <CalCard BMI={this.state.BMI} BMR={this.state.BMR} IBW={this.state.IBW} WeightMsg={this.state.WeightMsg} BMIMsg={this.state.BMIMsg} /> */}
 
                         </div>}                        {/* left-side */}
-                    <div className='right-side'>
+                    <div className='right-side1'>
                         <Form onSubmit={this.handleSubmit}>
                             <Form.Group className="mb-3" >
                                 <Form.Label>Enter You Weight</Form.Label>
