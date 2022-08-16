@@ -5,33 +5,69 @@ import Auth from './Auth';
 import { withAuth0 } from '@auth0/auth0-react';
 import image from './assets/Logo/Nav-Logo.png'
 import HeadCarousel from './HeadCarousel';
+import Container from 'react-bootstrap/Container';
+import LoginButton from './LoginButton';
+import LogoutButton from './LogoutButton';
 class Header extends React.Component {
     render() {
         const { user } = this.props.auth0;
 
         return (
             <>
-                <Navbar expand="md" style={{ backgroundColor: '#E2FCFF' }}>
-                    <Navbar.Brand className="NavBrand"
+
+                <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#fff" }}>
+             
+                    <Navbar.Brand 
+
                     // href="/"
                     >  <img
                             src={image}
                             alt="logo"
                             width={"135"} height={"70"}
                         /></Navbar.Brand>
-                    <Navbar.Collapse id="basic-navbar-nav">
-                        <Nav className="mr-auto">
-                            <NavItem ><Link to="/" className="nav-link" style={{ color: '#4c8389' }} >  Home </Link></NavItem>
-                            <NavItem ><Link to="/ContactUs" className="nav-link"  style={{ color: '#4c8389' }} >  Contact Us  </Link></NavItem>
-                            <NavItem ><Link to="/AboutUs" className="nav-link" style={{ color: '#4c8389' }} >  About Us </Link></NavItem>
-                            <NavItem ><Link to="/Calculations" className="nav-link" style={{ color: '#4c8389' }} >  Health Calculator </Link></NavItem>
-                            <br />
+
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                     <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <NavItem style={{ color: "red" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
+                            <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
+                            <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
+                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>
+                           
+                            
+                        </Nav>
+
+
+                        <Nav className="me-auto2">
                             {this.props.isAuthenticated && <>
-                                <NavItem className='HistoryHeader' ><Link style={{ color: '#4c8389' }}  to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>
-                            </>}
-                            <Auth className={'Auth'} />
+                                
+                                <NavItem ><Link to="/History" className="nav-link"> History </Link></NavItem>
+                                <NavItem >                     
+                                    <Link to="/History" className="nav-link">
+                                    
+                                    <img
+                                        src={user.picture}
+                                        alt="user"
+                                        className='imgUser'
+                                        width={"22"} height={"22"}
+                                    />  
+                                                                         
+                                         {" "+ user.name.substring(0, user.name.indexOf(' '))}  </Link>
+                               
+                                    </NavItem>
+                                <NavItem > <LogoutButton /> </NavItem>   
+                            </>
+                            }
+                              {!this.props.isAuthenticated && <>
+                            
+                            <NavItem > <LoginButton /> </NavItem>                        
+                        </>
+                        }
+
+
                         </Nav>
                     </Navbar.Collapse>
+                   
                 </Navbar>
             </>
         )
