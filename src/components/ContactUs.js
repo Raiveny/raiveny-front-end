@@ -59,9 +59,8 @@ class ContactUs extends Component {
                             <div className='input-box message-box'>
                                 <textarea></textarea>
                             </div>
-                             
-                                <button className='button' value='send'>Send</button>
-                            
+                            <button className='button' value='send'>Send</button>
+
                         </form>
 
                     </div>
