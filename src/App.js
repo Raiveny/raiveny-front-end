@@ -10,6 +10,7 @@ import ContactUs from './components/ContactUs';
 import History from './components/History';
 import Footer from './components/Footer';
 import Calculations from './components/Calculations';
+import FormMain from './components/FormMain';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   BrowserRouter as Router,
@@ -55,6 +56,10 @@ class App extends React.Component {
             <Route
               exact path="/Calculations"
               element={<Calculations />}           >
+            </Route>
+            <Route
+              exact path="/FormMain"
+              element={<FormMain />}           >
             </Route>
           </Routes>
         </Router>

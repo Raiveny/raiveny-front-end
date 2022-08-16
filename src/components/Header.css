@@ -1,0 +1,10 @@
+.navbar-head{
+    
+    background-color: #4c8389;
+}
+.navbar-head #basic-navbar-nav .mr-auto
+{
+/* color: #4c8389; */
+color:red;
+/* background-color: chartreuse; */
+}
