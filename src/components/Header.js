@@ -11,7 +11,7 @@ class Header extends React.Component {
 
         return (
             <>
-                <Navbar expand="md" style={{ backgroundColor: "#fff" }}>
+                <Navbar expand="md" style={{ backgroundColor: '#E2FCFF' }}>
                     <Navbar.Brand className="NavBrand"
                     // href="/"
                     >  <img
@@ -21,13 +21,13 @@ class Header extends React.Component {
                         /></Navbar.Brand>
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="mr-auto">
-                            <NavItem style={{ color: "black" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>
+                            <NavItem ><Link to="/" className="nav-link" style={{ color: '#4c8389' }} >  Home </Link></NavItem>
+                            <NavItem ><Link to="/ContactUs" className="nav-link"  style={{ color: '#4c8389' }} >  Contact Us  </Link></NavItem>
+                            <NavItem ><Link to="/AboutUs" className="nav-link" style={{ color: '#4c8389' }} >  About Us </Link></NavItem>
+                            <NavItem ><Link to="/Calculations" className="nav-link" style={{ color: '#4c8389' }} >  Health Calculator </Link></NavItem>
                             <br />
                             {this.props.isAuthenticated && <>
-                                <NavItem className='HistoryHeader' style={{ color: "black" }}><Link to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>
+                                <NavItem className='HistoryHeader' ><Link style={{ color: '#4c8389' }}  to="/History" className="nav-link" >  {user.name} History  </Link></NavItem>
                             </>}
                             <Auth className={'Auth'} />
                         </Nav>
