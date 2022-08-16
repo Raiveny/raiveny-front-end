@@ -14,7 +14,7 @@ class Header extends React.Component {
 
         return (
             <>
-                <Navbar collapseOnSelect expand="lg" style={{ backgroundColor: "#fff" }}>
+                <Navbar collapseOnSelect expand="md" style={{ backgroundColor: "#fff" }}>
              
                     <Navbar.Brand 
                     // href="/"
