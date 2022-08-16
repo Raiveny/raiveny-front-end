@@ -6,11 +6,24 @@
   /* background-color: #dededd; */
 }
 
+
 .body {
   margin: 0 !important;
   padding: 0 !important;
 
 }
+
+.nav-link{
+  color : black !important;
+    text-transform: uppercase;
+}
+.imgUser{
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 4px;
+}
+
 
 @font-face {
   font-family: abeatbyKaiRegular;
@@ -42,8 +55,7 @@ font-family: 'Rubik Moonrocks', cursive; */
   }
 }
 
-.cardClass {
-  /* margin: 28px; */
+.cardClass{
   border-radius: 33;
   border-radius: 15px 20px 95px !important;
   height: Auto;
@@ -100,6 +112,7 @@ font-family: 'Rubik Moonrocks', cursive; */
   border-radius: 7px;
 }
 
+
 .history-h1 {
   margin-top: 5%;
 }
@@ -130,13 +143,6 @@ font-family: 'Rubik Moonrocks', cursive; */
   white-space: nowrap;
 }
 
-
-/* .history-h1{
-  width: 100%;
-  text-align: center;
-  padding-top: 30px;
-  padding-bottom: 10px;
-} */
 .App-link {
   color: #61dafb;
 }
@@ -151,26 +157,51 @@ font-family: 'Rubik Moonrocks', cursive; */
   }
 }
 
-/* .HistoryHeader{
-position:static;
-right: 12%;
-} */
 
 .HistoryHeader {
   position: absolute;
   right: 12%;
 }
 
-.LogBtn {
-  position: absolute;
-  color: aliceblue;
-  font-weight: bold;
-  right: 3%;
-  background-color: #6cb6c4;
-  border: 0;
-width: 90px;
-height: 45px;
-border-radius: 10px;
+.LogBtn{
+
+background-color: #6cb6c4;
+color: #FFFFFF;
+border: solid transparent;
+border-radius: 12px;
+line-height: 20px;
+margin-right: 1rem !important;
+outline: none;
+padding: 7px 15px;
+text-align: center;
+text-transform: uppercase;
+touch-action: manipulation;
+transform: translateZ(0);
+transition: filter .2s;
+user-select: none;
+-webkit-user-select: none;
+vertical-align: middle;
+white-space: nowrap;
+}
+
+.LogBtn:active {
+  background-color: #2ca3cb;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.LogBtn:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 
