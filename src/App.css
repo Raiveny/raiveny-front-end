@@ -230,16 +230,17 @@ white-space: nowrap;
 }
 
 .div-video {
-  margin-top: 100px;
+  margin-top: 20px;
 }
 
 .video {
-  margin-top: 6%;
-  margin-bottom: 8%;
+
+  margin-top: 22px !important;
+  margin-bottom: 37px !important;
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-top: 22px !important;
 }
 
 .item {
@@ -366,3 +367,51 @@ video,
   vertical-align: baseline;
   font-family: 'Oxygen', sans-serif;
 }
+
+.ParentDivForm{
+  margin-left: 100px !important;
+  display: flex;
+  flex-direction: row;
+  height: 298px !important;
+  margin-top: -1rem;
+
+}
+
+.DivFormLift{
+
+margin-top: 62px;
+border-radius: 5px;
+background-color: #f2f2f2;
+padding-left: 62px;
+padding-right: 62px;
+
+}
+.form-button{
+  width:100% !important;
+}
+.form-search{
+     margin-left: 3px !important;
+    margin-top: 72px  !important;
+}
+
+.form-Control{
+  background-color: white !important;
+  background-image: url('./components/assets/search.png') !important;
+  background-position: 8px 9px !important;
+  background-repeat: no-repeat !important;
+  background-size: 25px 25px;
+  padding-left: 40px !important;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
+
+.DivFormRight img{
+  height: 21rem;
+  width: 37rem;
+  margin-left: 50px !important
+}
+
