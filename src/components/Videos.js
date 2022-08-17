@@ -7,7 +7,7 @@
         return (
        <div className='div-video'>
 
-          <h3> Related Videos</h3>
+          <h3 className='h3-video'> Related Videos</h3>
 
             <div className='video'>
              <ReactPlayer className='item' width='250px'height='200px'controls url='https://www.youtube.com/watch?v=9iMGFqMmUFs' 

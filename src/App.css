@@ -377,6 +377,21 @@ video,
   margin-top: -1rem;
 
 }
+@media (max-width: 800px) {
+  .ParentDivForm {
+    flex-direction: column;
+    margin-left: 1px !important;
+  }
+  .mainImg{
+    width: 20rem;
+  }
+
+  .h3-video {
+    margin-top: 20rem;
+  }
+}
+
+
 
 .DivFormLift{
 
@@ -409,6 +424,8 @@ padding-right: 62px;
   font-size: 16px;
   margin-bottom: 1rem;
 }
+
+
 .form-Control:focus{
   background-color: white !important;
   background-image: url('./components/assets/search.png') !important;
