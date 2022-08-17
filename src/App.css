@@ -6,32 +6,59 @@
   /* background-color: #dededd; */
 }
 
-
 .body {
   margin: 0 !important;
   padding: 0 !important;
-
 }
 
-.nav-link{
-  color : black !important;
-    text-transform: uppercase;
+.nav-link {
+  color: #4c8389 !important;
+  font-weight: bolder !important;
+  margin-left: 35px;
+  /* text-transform: uppercase; */
 }
-.imgUser{
+
+.nav-link:hover {
+  border-bottom: 1px solid #4c8389;
+  transition-duration: 2000ms;
+}
+
+.imgUser {
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  margin-bottom: -5px;
+  height: 26px;
+  width: 26px;
+  /* margin-bottom: -5px; */
+}
+
+.me-auto2 {
+  position: relative;
+  margin-left: 35px;
+}
+
+.nav-link2 {
+  position: relative;
+  margin-top: 5px;
+  color: #4c8389 !important;
+  font-weight: bolder !important;
+}
+
+/* .HistoryHeader {
+  position: absolute;
+  right: 15%;
+} */
+
+.historyPic {
+  margin: 0px 7px;
 }
 
 
 @font-face {
-  font-family: abeatbyKaiRegular;
+  /* font-family: abeatbyKaiRegular; */
   src: url("./components/style/abeatbyKaiRegular.otf") format("opentype");
 }
 
 @font-face {
-  font-family: BebasNeue-Regular;
+  /* font-family: BebasNeue-Regular; */
   src: url("./components/style/BebasNeue-Regular.otf") format("opentype");
 }
 
@@ -55,7 +82,7 @@ font-family: 'Rubik Moonrocks', cursive; */
   }
 }
 
-.cardClass{
+.cardClass {
   border-radius: 33;
   border-radius: 15px 20px 95px !important;
   height: Auto;
@@ -72,7 +99,7 @@ font-family: 'Rubik Moonrocks', cursive; */
 }
 
 .cardText {
-  font-family: 'Oswald', sans-serif;
+  /* font-family: 'Oswald', sans-serif; */
 
 
 }
@@ -90,7 +117,7 @@ font-family: 'Rubik Moonrocks', cursive; */
 }
 
 .titleCardHeaderDiv {
-  margin-top : 40 !important;
+  margin-top: 40 !important;
   padding-left: 7% !important;
   padding-right: 7% !important;
   padding-bottom: 3%;
@@ -101,13 +128,15 @@ font-family: 'Rubik Moonrocks', cursive; */
 .cardParent {
   width: 100% !important;
   display: grid !important;
-  font-family: abeatbyKaiRegular;
+  /* font-family: abeatbyKaiRegular; */
   padding: 17px !important;
   border-radius: 20px 20px 20px !important;
 }
-.containerCard{
+
+.containerCard {
   margin-top: 42px !important;
 }
+
 .cardImg {
   grid-row: 1 / 4 !important;
   width: 23rem !important;
@@ -130,7 +159,7 @@ font-family: 'Rubik Moonrocks', cursive; */
 
 .hero-h1 {
   text-transform: uppercase;
-  font-family: BebasNeue-Regular !important;
+  /* font-family: BebasNeue-Regular !important; */
 }
 
 .hero-img {
@@ -139,7 +168,7 @@ font-family: 'Rubik Moonrocks', cursive; */
 
 .headerLogo {
   text-align: center;
-  font-family: abeatbyKaiRegular !important;
+  /* font-family: abeatbyKaiRegular !important; */
   font-size: 12vmin;
   font-weight: 700;
   text-shadow: 8px 4px 5px rgb(119, 200, 216) !important;
@@ -162,30 +191,27 @@ font-family: 'Rubik Moonrocks', cursive; */
 }
 
 
-.HistoryHeader {
-  position: absolute;
-  right: 12%;
-}
 
-.LogBtn{
 
-background-color: #6cb6c4;
-color: #FFFFFF;
-border: solid transparent;
-border-radius: 12px;
-line-height: 20px;
-margin-right: 1rem !important;
-outline: none;
-padding: 7px 15px;
-text-align: center;
-text-transform: uppercase;
-touch-action: manipulation;
-transform: translateZ(0);
-transition: filter .2s;
-user-select: none;
--webkit-user-select: none;
-vertical-align: middle;
-white-space: nowrap;
+.LogBtn {
+
+  background-color: #6cb6c4;
+  color: #FFFFFF;
+  border: solid transparent;
+  border-radius: 12px;
+  line-height: 20px;
+  margin-right: 1rem !important;
+  outline: none;
+  padding: 7px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 .LogBtn:active {
@@ -193,6 +219,7 @@ white-space: nowrap;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+
 .LogBtn:after {
   background-clip: padding-box;
   background-color: #1CB0F6;
@@ -214,8 +241,8 @@ white-space: nowrap;
   user-select: auto;
 }
 
-.LogBtn:hover{
-  background-color: rgb(76,131,137) !important;
+.LogBtn:hover {
+  background-color: rgb(76, 131, 137) !important;
 
 }
 
@@ -233,6 +260,7 @@ white-space: nowrap;
 .div-video {
   margin-top: 20px;
 }
+
 
 .video {
 
@@ -369,7 +397,7 @@ video,
   font-family: 'Oxygen', sans-serif;
 }
 
-.ParentDivForm{
+.ParentDivForm {
   margin-left: 100px !important;
   display: flex;
   flex-direction: row;
@@ -378,45 +406,51 @@ video,
 
 }
 
-.mainImg{
+.mainImg {
   width: 33rem;
 }
+
 @media (max-width: 800px) {
   .ParentDivForm {
     flex-direction: column;
   }
-  .mainImg{
+
+  .mainImg {
     width: 20rem;
   }
-  .containerCard{
+
+  .containerCard {
     margin-top: 20rem !important;
   }
 
   .h3-video {
     margin-top: 20rem;
+    font-size: xx-large !important;
   }
 }
 
 
 
-.DivFormLift{
+.DivFormLift {
 
-margin-top: 62px;
-border-radius: 5px;
-background-color: #f2f2f2;
-padding-left: 62px;
-padding-right: 62px;
-margin-left: 1rem;
-}
-.form-button{
-  width:100% !important;
-}
-.form-search{
-     margin-left: 3px !important;
-    margin-top: 72px  !important;
+  margin-top: 62px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding-left: 62px;
+  padding-right: 62px;
+  margin-left: 1rem;
 }
 
-.form-Control{
+.form-button {
+  width: 100% !important;
+}
+
+.form-search {
+  margin-left: 3px !important;
+  margin-top: 72px !important;
+}
+
+.form-Control {
   background-color: white !important;
   background-image: url('./components/assets/search.png') !important;
   background-position: 8px 9px !important;
@@ -432,7 +466,7 @@ margin-left: 1rem;
 }
 
 
-.form-Control:focus{
+.form-Control:focus {
   background-color: white !important;
   background-image: url('./components/assets/search.png') !important;
   background-position: 8px 9px !important;
@@ -446,9 +480,15 @@ margin-left: 1rem;
   font-size: 16px;
   margin-bottom: 1rem;
 }
-.DivFormRight img{
+
+.DivFormRight img {
   height: 21rem;
   width: 37rem;
   margin-left: 50px !important
 }
 
+
+.hisTable {
+  position: relative;
+  margin-top: -45px;
+}

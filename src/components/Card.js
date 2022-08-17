@@ -14,7 +14,6 @@ class BasicExample extends React.Component {
                     <Card.Img className='cardImg' variant="top" src={(this.props.data.medication_img) ? this.props.data.medication_img : `https://thumbs.dreamstime.com/b/no-image-available-icon-photo-camera-flat-vector-illustration-132483141.jpg`} 
                     style={{ marginRight : '25px' }} 
                     />
-
                     <Card.Body className='cardBody' >
                         <Card.Title className='cardTitle' >{(this.props.data !== undefined) ? this.props.data.medication_Name : ""}</Card.Title>
 

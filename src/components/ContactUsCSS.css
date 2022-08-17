@@ -45,10 +45,10 @@
 .container .content .left-side::before {
    content: '';
    position: absolute;
-   height: 70%;
+   height: 57%;
    width: 2px;
-   right: -40px;
-   top: 50%;
+   right: 940px;
+   top: 52%;
    transform: translateY(-50%);
    background: rgb(108,182,196);
 

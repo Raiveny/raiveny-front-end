@@ -122,28 +122,28 @@ class Calculations extends Component {
                         <div className='left-side1'>
                             <Form onSubmit={this.handleSubmit}>
                                 <Form.Group className="mb-3" >
-                                    {/* <Form.Label>Enter You Weight</Form.Label> */}
+                                    {/* <Form.Label className='calLbl'>Enter You Weight</Form.Label> */}
                                     <Form.Control type='Number' required id="Weight" placeholder="Enter You Weight" />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid Weight.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" >
-                                    {/* <Form.Label>Enter Your Height</Form.Label> */}
+                                    {/* <Form.Label className='calLbl'>Enter Your Height</Form.Label> */}
                                     <Form.Control type='Number' required id="Height" placeholder="Enter Your Height" />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid Height.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" >
-                                    {/* <Form.Label>Enter Your Age</Form.Label> */}
+                                    {/* <Form.Label className='calLbl'>Enter Your Age</Form.Label> */}
                                     <Form.Control type='Number' required id="Age" placeholder="Enter Your Age" />
                                     <Form.Control.Feedback type="invalid">
                                         Please provide a valid Age.
                                     </Form.Control.Feedback>
                                 </Form.Group>
                                 <Form.Group className="mb-3" >
-                                    {/* <Form.Label>How Active Are You?</Form.Label> */}
+                                    <Form.Label className='calLbl'>How Active Are You?</Form.Label>
                                     <Form.Select id="Active" >
                                         {/* <Form.Control required  placeholder="Enter Your Active  level" /> */}
                                         <option disabled defaultChecked value="">Enter Your Active level</option>
@@ -155,8 +155,10 @@ class Calculations extends Component {
                                     </Form.Select>
                                 </Form.Group>
                                 <Form.Group className="mb-3" >
-                                    {/* <Form.Label>Enter Your Gender</Form.Label> */}
+                                    <Form.Label className='calLbl'> Enter Your Gender</Form.Label>
                                     <Form.Select id="Gender">
+                                    <option disabled defaultChecked value="">Enter Your Gender</option>
+
                                         <option value="M">Male</option>
                                         <option value="F">Female</option>
                                     </Form.Select>
