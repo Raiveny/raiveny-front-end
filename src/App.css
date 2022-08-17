@@ -90,9 +90,11 @@ font-family: 'Rubik Moonrocks', cursive; */
 }
 
 .titleCardHeaderDiv {
+  margin-top : 40 !important;
   padding-left: 7% !important;
   padding-right: 7% !important;
   padding-bottom: 3%;
+
 
 }
 
@@ -103,7 +105,9 @@ font-family: 'Rubik Moonrocks', cursive; */
   padding: 17px !important;
   border-radius: 20px 20px 20px !important;
 }
-
+.containerCard{
+  margin-top: 42px !important;
+}
 .cardImg {
   grid-row: 1 / 4 !important;
   width: 23rem !important;
@@ -405,7 +409,20 @@ padding-right: 62px;
   font-size: 16px;
   margin-bottom: 1rem;
 }
-
+.form-Control:focus{
+  background-color: white !important;
+  background-image: url('./components/assets/search.png') !important;
+  background-position: 8px 9px !important;
+  background-repeat: no-repeat !important;
+  background-size: 25px 25px;
+  padding-left: 40px !important;
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  margin-bottom: 1rem;
+}
 .DivFormRight img{
   height: 21rem;
   width: 37rem;
