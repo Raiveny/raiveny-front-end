@@ -19,6 +19,13 @@
   color: #4c8389;
 
 }
+.copyFooter{
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: #4c8389;
+  margin-top: 1rem !important;
+}
 .copy-footer {
   animation-duration: 3s;
   animation-name: slidein;
