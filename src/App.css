@@ -377,13 +377,19 @@ video,
   margin-top: -1rem;
 
 }
+
+.mainImg{
+  width: 33rem;
+}
 @media (max-width: 800px) {
   .ParentDivForm {
     flex-direction: column;
-    margin-left: 1px !important;
   }
   .mainImg{
     width: 20rem;
+  }
+  .containerCard{
+    margin-top: 20rem !important;
   }
 
   .h3-video {
@@ -400,7 +406,7 @@ border-radius: 5px;
 background-color: #f2f2f2;
 padding-left: 62px;
 padding-right: 62px;
-
+margin-left: 1rem;
 }
 .form-button{
   width:100% !important;
