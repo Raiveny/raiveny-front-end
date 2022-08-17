@@ -2,11 +2,12 @@
   margin: 0;
   padding:0;
   position: relative;
+  /* margin-top: 100px; */
   bottom: 0px;
   width: 100%;
   padding-top: 25px;
   background-color: #E2FCFF;
-  height: 300px ;
+  height: 250px ;
   text-shadow: 0.5px  .5px 1px rgb(92,173,190) ;
   font-style: italic;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -38,5 +39,12 @@
 .footIcons {
   position: absolute;
   bottom: 25px;
+}
 
+.footImg{
+  position: relative;
+  margin-top:  -19px;
+}
+.footerP {
+  margin-top: -15px;
 }

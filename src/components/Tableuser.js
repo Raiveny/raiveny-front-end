@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table';
 import axios from 'axios';
 import './Tableuser.css';
 
+
 class History extends Component {
     constructor(props) {
         super(props);
@@ -34,10 +35,11 @@ class History extends Component {
 
         return (
             <>
+
                 <div className='table'>
                     {this.state.history &&
                         <Table striped responsive bordered hover className='table-user'>
-                            <thead>
+                            <thead className='tableh'>
                                 <tr>
                                     <th>Disease Name</th>
                                     <th>Medication Name</th>

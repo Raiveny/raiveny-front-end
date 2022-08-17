@@ -12,54 +12,47 @@ class Header extends React.Component {
 
         return (
             <>
-             <Navbar collapseOnSelect expand="sm" style={{ backgroundColor: "#E2fcff" }}>
+                <Navbar collapseOnSelect expand="sm" style={{ backgroundColor: "#E2fcff" }}>
                     <Navbar.Brand >
-                          <img
+                        <img
                             src={image}
                             alt="logo"
                             width={"135"} height={"45"}
                         /></Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
 
-                     <Navbar.Collapse id="responsive-navbar-nav">
+                    <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <NavItem style={{ color: "red" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>       
+                            <NavItem ><Link to="/" className="nav-link" >  Home </Link></NavItem>
+                            <NavItem ><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>
+                            <NavItem ><Link to="/ContactUs" className="nav-link" >  Contact us  </Link></NavItem>
+                            <NavItem ><Link to="/AboutUs" className="nav-link" >  About us </Link></NavItem>
                         </Nav>
+                            <Nav className="me-auto2">
+                                {this.props.isAuthenticated &&
+                                    <>
+                                        <NavItem ><Link to="/History" className="nav-link2 , HistoryHeader"> History </Link></NavItem>
+                                        <NavItem >
+                                            <Link to="/History" className="nav-link2">
+                                                <img
+                                                    src={user.picture}
+                                                    alt="user"
+                                                    className='imgUser'
+                                                />
+                                                {" " + user.name.substring(0, user.name.indexOf(' '))}  </Link>
 
+                                        </NavItem>
+                                        <NavItem > <LogoutButton /> </NavItem>
+                                    </>
+                                }
+                                {!this.props.isAuthenticated && <>
 
-                        <Nav className="me-auto2">
-                            {this.props.isAuthenticated && <>
-                                
-                                <NavItem ><Link to="/History" className="nav-link"> History </Link></NavItem>
-                                <NavItem >                     
-                                    <Link to="/History" className="nav-link">
-                                    
-                                    <img
-                                        src={user.picture}
-                                        alt="user"
-                                        className='imgUser'
-                                        width={"22"} height={"22"}
-                                    />                                 
-                                         {" "+ user.name.substring(0, user.name.indexOf(' '))}  </Link>
-                               
-                                    </NavItem>
-                                <NavItem > <LogoutButton /> </NavItem>   
-                            </>
-                            }
-                              {!this.props.isAuthenticated && <>
-                            
-                            <NavItem > <LoginButton /> </NavItem>                        
-                        </>
-                        }
-
-
-
-                        </Nav>
+                                    <NavItem > <LoginButton /> </NavItem>
+                                </>
+                                }
+                            </Nav>
                     </Navbar.Collapse>
-                   
+
                 </Navbar>
             </>
         )

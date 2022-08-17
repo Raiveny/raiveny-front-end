@@ -14,9 +14,12 @@
 
 
 }
-.cal-h3{
+
+.cal-h3 {
    margin-bottom: 3%;
    margin-top: 3%;
+   font-weight: bolder;
+   color: #4c8389;
 }
 
 .container1 {
@@ -83,7 +86,7 @@
 
 .content1 .left-side1 .details1 i {
    font-size: 30px;
-   color: rgb(108,182,196);
+   color: rgb(108, 182, 196);
    margin-bottom: 10px;
 }
 
@@ -141,15 +144,15 @@
    min-height: 110px;
 }
 
-.btm-cal{
+.btm-cal {
    background-color: #6cb6c4;
    margin-top: 2%;
    border: 0;
 
 }
 
-.btm-cal:hover{
-   background-color: rgb(76,131,137) !important;
+.btm-cal:hover {
+   background-color: rgb(76, 131, 137) !important;
 }
 
 
@@ -223,4 +226,10 @@
 
 .left-side1:hover {
    margin-top: 25px;
+}
+
+.calLbl {
+position: relative;
+/* margin-right: 60px; */
+margin-left: -60px;
 }
