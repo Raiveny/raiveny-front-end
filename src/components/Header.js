@@ -24,9 +24,9 @@ class Header extends React.Component {
                      <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <NavItem style={{ color: "red" }}><Link to="/" className="nav-link" >  Home </Link></NavItem>
+                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>       
                             <NavItem style={{ color: "black" }}><Link to="/ContactUs" className="nav-link" >  Contact Us  </Link></NavItem>
                             <NavItem style={{ color: "black" }}><Link to="/AboutUs" className="nav-link" >  About Us </Link></NavItem>
-                            <NavItem style={{ color: "black" }}><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>       
                         </Nav>
 
 
