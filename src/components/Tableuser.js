@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Table from 'react-bootstrap/Table';
 import axios from 'axios';
+import './Tableuser.css';
+
 class History extends Component {
     constructor(props) {
         super(props);
@@ -8,47 +10,53 @@ class History extends Component {
             history: [],
         }
     }
-    // getHistory = async () => {
-    //     const res = await axios.get('https://raiveny.herokuapp.com/data/history?userEmail=team301project@gmail.com');
-    //     this.setState(
-    //         {
-    //             history: res.data.data,
-    //         }
-    //     );
-    //     console.log(this.state.history)
-    // }
+    getHistory = async () => {
+        const URL = `https://raiveny.herokuapp.com/data/history?userEmail=${this.props.useremail}`
+        console.log("from table " + URL)
+        // const res = await axios.get('https://raiveny.herokuapp.com/data/history?userEmail=team301project@gmail.com');
+        const res = await axios.get(URL);
 
-    // componentDidMount() {
-    //     console.log("inside the componentDidMount");
-    //     this.getHistory();
+        this.setState(
+            {
+                history: res.data.data,
+            }
+        );
+        console.log(this.state.history)
+    }
 
-    // }
+    componentDidMount() {
+        console.log("inside the componentDidMount");
+        this.getHistory();
+
+    }
 
     render() {
 
         return (
             <>
-                {/* {this.state.history &&
-                    <Table striped responsive bordered hover>
-                        <thead>
-                            <tr>
-                                <th>Disease Name</th>
-                                <th>Medication Name</th>
-                                <th>Medication Route</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {this.state.history.map(item =>
+                <div className='table'>
+                    {this.state.history &&
+                        <Table striped responsive bordered hover className='table-user'>
+                            <thead>
                                 <tr>
-                                    <td>{item.Name}</td>
-                                    <td>{item.medication[0].medication_Name}</td>
-                                    <td>{item.medication[0].medication_route}</td>
+                                    <th>Disease Name</th>
+                                    <th>Medication Name</th>
+                                    <th>Medication Route</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                                {this.state.history.map(item =>
+                                    <tr>
+                                        <td>{item.Name}</td>
+                                        <td>{item.medication[0].medication_Name}</td>
+                                        <td>{item.medication[0].medication_route}</td>
+                                    </tr>
 
-                            )}
-                        </tbody>
-                    </Table>
-                } */}
+                                )}
+                            </tbody>
+                        </Table>
+                    }
+                </div>
             </>
         );
     }

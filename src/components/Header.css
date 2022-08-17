@@ -1,0 +1,19 @@
+
+
+.navbar-head{
+    
+    background-color: #4c8389;
+}
+.navbar-head .basic-navbar-nav .mr-auto
+{
+/* color: #4c8389; */
+color:rgb(88, 7, 7);
+/* background-color: chartreuse; */
+}
+
+.HistoryHeader.nav-link.img-nav{
+size: 10%;
+}
+.nav .basic-navbar-nav .mr-auto .nav-link {
+    color: rgb(183, 12, 12);
+}

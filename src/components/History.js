@@ -1,23 +1,24 @@
 import React, { Component } from 'react';
-import { useAuth0 } from "@auth0/auth0-react";
 import Tableuser from "./Tableuser"
+import { useAuth0 } from "@auth0/auth0-react";
 
+const History = () => {
 
-class History extends Component {
+    const { user, isAuthenticated, isLoading, email } = useAuth0()
+    // console.log('Authenticated ? ', isAuthenticated)
+    // console.log('name ? ', user.name)
+    // console.log('email ? ', user.email)
+    return (
+        <>
+            <h1 className='history-h1'>History</h1> 
+            {isAuthenticated &&
+                (
+                    <Tableuser useremail={user.email} />
+                )
+                }
+        </>
 
-    render() {
-        // const { user} = this.props.auth0;
-
-        return (
-
-            <>
-                <h1 className='history-h1'>History</h1>
-
-                <Tableuser />
-            </>
-
-        );
-    }
+    );
 }
 
 export default History;
