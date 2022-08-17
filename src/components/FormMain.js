@@ -57,6 +57,7 @@ class FormMain extends Component {
                     <img
                             src={rightMain}
                             alt="mainirght"
+                            className='mainImg'
                             width={"135"} height={"70"}
                         />
 
