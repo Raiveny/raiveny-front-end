@@ -31,6 +31,9 @@
   animation-duration: 3s;
   animation-name: slidein;
 }
+.footCopyRight{
+  margin-top: 1.25rem;
+}
 
 .copy-footer u{
   color: rgb(56, 50, 50);

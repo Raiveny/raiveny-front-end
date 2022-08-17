@@ -23,10 +23,12 @@ class Header extends React.Component {
 
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
+
                             <NavItem ><Link to="/" className="nav-link" >  Home </Link></NavItem>
                             <NavItem ><Link to="/Calculations" className="nav-link" >  Health Calculator </Link></NavItem>
                             <NavItem ><Link to="/ContactUs" className="nav-link" >  Contact us  </Link></NavItem>
                             <NavItem ><Link to="/AboutUs" className="nav-link" >  About us </Link></NavItem>
+
                         </Nav>
                             <Nav className="me-auto2">
                                 {this.props.isAuthenticated &&
