@@ -35,11 +35,36 @@
   margin-left: 35px;
 }
 
+.xxx {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 30px;
+  text-decoration: none;
+}
+
+.xxx:hover {
+  border-bottom: 1px solid #4c8389;
+  transition-duration: 2000ms;
+  transition-delay: 2ms;
+}
+
 .nav-link2 {
   position: relative;
   margin-top: 5px;
   color: #4c8389 !important;
   font-weight: bolder !important;
+  text-decoration: none;
+
+}
+
+.nav-link2k {
+  position: relative;
+  margin-top: 5px;
+  color: #4c8389 !important;
+  font-weight: bolder !important;
+  text-decoration: none;
+  top:2px;
+
 }
 
 /* .HistoryHeader {
