@@ -33,15 +33,16 @@ class Header extends React.Component {
                             <Nav className="me-auto2">
                                 {this.props.isAuthenticated &&
                                     <>
-                                        <NavItem ><Link to="/History" className="nav-link2 , HistoryHeader"> History </Link></NavItem>
-                                        <NavItem >
-                                            <Link to="/History" className="nav-link2">
+                                        <NavItem className='xxx'><Link to="/History" className="nav-link2 , HistoryHeader"> History </Link></NavItem>
+                                        <NavItem className='xxx'>
+                                            <Link to="/History" className="nav-link2k">
                                                 <img
                                                     src={user.picture}
                                                     alt="user"
                                                     className='imgUser'
-                                                />
-                                                {" " + user.name.substring(0, user.name.indexOf(' '))}  </Link>
+                                                /> {" " + user.name.substring(0, user.name.indexOf(' '))} 
+                                                </Link>
+                                                
 
                                         </NavItem>
                                         <NavItem > <LogoutButton /> </NavItem>
