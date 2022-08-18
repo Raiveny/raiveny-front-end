@@ -25,7 +25,7 @@ class App extends React.Component {
     const { isAuthenticated } = this.props.auth0;
     return (
       <>
-     alert('kindly note id there is no data appear that's mean the free api end') 
+  
         <div className="App">
           <Helmet>
             <meta charSet="utf-8" />
