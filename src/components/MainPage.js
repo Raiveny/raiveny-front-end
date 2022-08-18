@@ -14,8 +14,8 @@ function MainPage() {
     user
   } = useAuth0();
   const Success = () => toast.success('We Found Something for You');
-  const Error = () => toast.error('We are Sorry, We did not Find anything');
-  const ServerError = () => toast.error('there is an Error With Server');
+  const Error = () => toast.error('We are Sorry, We did not Find anything, or the free API expired ');
+  const ServerError = () => toast.error('there is an Error With Server, or the free API expired ');
 
   const [state, setState] = React.useState({ search: null, data: null, flag: false, imgArr: [] });
   return (
